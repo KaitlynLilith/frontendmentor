@@ -8,9 +8,6 @@
   <!-- Imports the CSS for the page --> 
   <link rel="stylesheet" href="styles/index.css">
 
-  <!-- Imports the Javascript for the page --> 
-  <script src="scripts/index.js"></script> 
-
   <!-- Icon and Title: Shows up in browser tab -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Katie Fox</title>
@@ -21,108 +18,147 @@
   <div id="everythingbox" class="flexr row rel">
     <!-- Main box: holds main content -->
     <div id="mainbox" class="flexc row rel">
+      <!-- White box: makes the white box around the content -->
       <div id="whitebox" class="rel row">
+        <!-- Left box: the top box in mobile view and left box in desktop view -->
         <div id="leftbox" class="rel">
-          <img src="images/illustration-woman-online-mobile.svg" alt="Ilustration of woman working" id="woman">
+          <!-- Image displayed in mobile view -->
+          <img src="images/illustration-woman-online-mobile.svg" alt="Ilustration of woman working" id="womanm">
+          <!-- Image displayed in desktop view (not displayed when the page loads) -->
+          <img src="images/illustration-woman-online-desktop.svg" alt="Ilustration of woman working" id="womand">
+          <!-- Image of box displayed in desktop view (not displayed when the page loads) -->
           <img src="images/illustration-box-desktop.svg" alt="Illustration of box" id="box">
         </div>
+        <!-- Right box: the bottom box in mobile view and right box in desktop view -->
         <div id="rightbox" class="flexc rel">
+          <!-- FAQ heading -->
           <h1 id="heading">
             FAQ
           </h1>
-          <article>
-            <div id="faqbox1" class="faqbox rel">
+            <!-- FAQ box 1: holds the question, arrow, and answer -->
+            <div id="faqbox1" onclick="showFAQ(1)" class="faqbox reaction flexc rel">
+              <!-- Question box 1: holds question and arrow -->
               <div id="q1box" class="flexr rel qb">
-                <h2 id="q1h2" class="qh2">
+                <!-- Question 1 -->
+                <h2 id="q1h2" class="qh2 reaction">
                   How many team members can I invite?
                 </h2>
+                <!-- Arrow button 1 -->
                 <div id="a1" class='abtn'>
-                  <img src="images/icon-arrow-down.svg" alt="Down arrow" id="a1a" class="arrow">
+                  <!-- Arrow 1 -->
+                  <img src="images/icon-arrow-down.svg" alt="Down arrow" id="a1a" class="arrow reaction">
                 </div>
               </div>
-
-              <div id="a1b" class="answer">
+              <!-- Answer box 1: not displayed when the page loads -->
+              <div id="a1b" class="answer reaction">
+                <!-- Answer para text 1 -->
                 <p id="a1p" class="ap">
                 You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
                 </p>
               </div>
             </div>
-          </article>
-          <article>
-            <div id="faqbox2" class="faqbox">
+
+            <!-- FAQ box 2: holds the question, arrow, and answer -->
+            <div id="faqbox2" onclick="showFAQ(2)" class="faqbox flexc reaction">
+              <!-- Question box 2: holds question and arrow -->
               <div id="q2box" class="flexr rel qb">
-                <h2 id="q2h2" class="qh2">
+                <!-- Question 2 -->
+                <h2 id="q2h2" class="qh2 reaction">
                   What is the maximum file upload size?
                 </h2>
+                <!-- Arrow button 2 -->
                 <div id="a2" class='abtn'>
-                  <img src="images/icon-arrow-down.svg" alt="Down arrow" id="a2a" class="arrow">
+                  <!-- Arrow 2 -->
+                  <img src="images/icon-arrow-down.svg" alt="Down arrow" id="a2a" class="arrow reaction">
                 </div>
               </div>
 
-              <div id="a2b" class="answer">
+              <!-- Answer box 2: not displayed when the page loads -->
+              <div id="a2b" class="answer reaction">
+                <!-- Answer para text 2 -->
                 <p id="a2p" class="ap">
                   No more than 2GB. All files in your account must fit your allotted storage space.
                 </p>
               </div>
             </div>
-          </article>
-          <article>
-            <div id="faqbox3" class="faqbox">
+
+            <!-- FAQ box 3: holds the question, arrow, and answer -->
+            <div id="faqbox3" onclick="showFAQ(3)" class="faqbox reaction flexc">
+              <!-- Question box 3: holds question and arrow -->
               <div id="q3box" class="flexr rel qb">
-                <h2 id="q3h2" class="qh2">
+                <!-- Question 3 -->
+                <h2 id="q3h2" class="qh2 reaction">
                   How do I reset my password?
                 </h2>
+                <!-- Arrow button 3 -->
                 <div id="a3" class='abtn'>
-                  <img src="images/icon-arrow-down.svg" alt="Down arrow" id="a3a" c3ass="arrow">
+                  <!-- Arrow 3 -->
+                  <img src="images/icon-arrow-down.svg" alt="Down arrow" id="a3a" c3ass="arrow reaction">
                 </div>
               </div>
 
-              <div id="a3b" class="answer">
+              <!-- Answer box 3: not displayed when the page loads -->
+              <div id="a3b" class="answer reaction">
+                <!-- Answer para text 3 -->
                 <p id="a3p" class="ap">
                   Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.
                 </p>
               </div>
             </div>
-          </article>
-          <article>
-            <div id="faqbox4" class="faqbox">
+          
+            <!-- FAQ box 4: holds the question, arrow, and answer -->
+            <div id="faqbox4" onclick="showFAQ(4)" class="faqbox reaction flexc">
+              <!-- Question box 4: holds question and arrow -->
               <div id="q4box" class="flexr rel qb">
-                <h2 id="q4h2" class="qh2">
+                <!-- Question 4 -->
+                <h2 id="q4h2" class="qh2 reaction">
                   Can I cancel my subscription?
                 </h2>
+                <!-- Arrow button 4 -->
                 <div id="a4" class='abtn'>
-                  <img src="images/icon-arrow-down.svg" alt="Down arrow" id="a4a" class="arrow">
+                  <!-- Arrow 4 -->
+                  <img src="images/icon-arrow-down.svg" alt="Down arrow" id="a4a" class="arrow reaction">
                 </div>
               </div>
 
-              <div id="a4b" class="answer">
+              <!-- Answer box 4: not displayed when the page loads -->
+              <div id="a4b" class="answer reaction">
+                <!-- Answer para text 4 -->
                 <p id="a4p" class="ap">
                   Yes! Send us a message and we’ll process your request no questions asked.
                 </p>
               </div>
             </div>
-          </article>
-          <article>
-            <div id="faqbox5" class="faqbox">
+          
+            <!-- FAQ box 5: holds the question, arrow, and answer -->
+            <div id="faqbox5" onclick="showFAQ(5)" class="faqbox reaction flexc">
+              <!-- Question box 5: holds question and arrow -->
               <div id="q5box" class="flexr rel qb">
-                <h2 id="q5h2" class="qh2">
+                <!-- Question 5 -->
+                <h2 id="q5h2" class="qh2 reaction">
                   Do you provide additional support?
                 </h2>
+                <!-- Arrow button 5 -->
                 <div id="a5" class='abtn'>
-                  <img src="images/icon-arrow-down.svg" alt="Down arrow" id="a5a" class="arrow">
+                  <!-- Arrow 5 -->
+                  <img src="images/icon-arrow-down.svg" alt="Down arrow" id="a5a" class="arrow reaction">
                 </div>
               </div>
 
-              <div id="a5b" class="answer ab">
+              <!-- Answer box 5: not displayed when the page loads -->
+              <div id="a5b" class="answer reaction">
+                <!-- Answer para text 5 -->
                 <p id="a5p" class="ap">
                   Chat and email support is available 24/7. Phone lines are open during normal business hours.
                 </p>
               </div>
             </div>
-          </article>
+
         </div>
       </div>
     </div>
   </div>
+  <!-- Imports the Javascript for the page --> 
+  <script src="scripts/index.js"></script> 
 </body>
 </html> 
