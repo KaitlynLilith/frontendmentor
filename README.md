@@ -45,7 +45,7 @@ X https://www.frontendmentor.io/challenges/huddle-landing-page-with-curved-secti
 
 X https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI
 
- https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam
+X https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam
 
  https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT
 

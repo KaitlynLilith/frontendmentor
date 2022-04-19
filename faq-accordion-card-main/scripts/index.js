@@ -4,19 +4,19 @@ function showFAQ(num) {
 
     // Returns an array of all elements that could be changed when clicked
     var reactions = document.querySelectorAll(".reaction");
-  
+    console.log(reactions);
     // The element named  'a' + num + 'a'
     // One of the arrows
     var anuma = document.getElementById("a" + num + "a");
-    
+    console.log(anuma);
     // The element named  'a' + num + 'b'
     // One of the answer boxes
     var anumb = document.getElementById("a" + num + "b");
-   
+    console.log(anumb);
     // The element named  'q' + num + 'h2'
     // One of the question
     var qnumh2 = document.getElementById("q" + num + "h2");
-
+    console.log(qnumh2);
     // If the arrow being clicked contains a class named show
     if (anumb.classList.contains('show')) {
 

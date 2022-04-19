@@ -139,6 +139,7 @@ p {
 /* Makes a foundation for all other boxes */
 #everythingbox {
     background-image: linear-gradient(var(--tertiary-color), var(--quaternary-color));
+    background-size: 100% 100%;
     width: 100%;
     height: 100vh;
 }
@@ -146,24 +147,35 @@ p {
 /* Formats the main container */
 #mainbox {   
     width: 100%;
-    height: 100%; 
+    height: auto; 
     align-items: center;
 }
 
 /* Formats the white box */
 #whitebox{
-    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
     width: 87%;
-    background-color:  var(--white);
-    padding: 2rem;
+    min-height: 75%;
+    background-color: var(--white);
     border-radius: 2rem;
     margin: 12rem 0 4rem 0;
+}
+
+/* Formats the image of the box shown on desktops */
+#box {
+    display: none;
+}
+
+/* Formats the left box wrapper */
+#leftboxwrap {
+    height: 20%;
 }
 
 /* Formats the left box containing 3 images */
 #leftbox {
     position: absolute;
-    top: -22%;
+    top: -100%;
     right: 50%;
     transform: translateX(50%);
     height: 18rem;
@@ -186,14 +198,9 @@ p {
     display: none;
 }
 
-/* Formats the image of the box shown on desktops */
-#box {
-    display: none;
-}
-
 /* Formats right box containing 5 questions and answers */
 #rightbox {
-    margin-top: 8rem;
+    padding: 2rem 2rem 2rem 2rem;
 }
 
 /* Formats the heading at the top of the question */
@@ -378,8 +385,6 @@ p {
 }
 
 
-
-
 /* Responsive CSS */
 
 /* Allows elements to be stacked in rows without filling all 12 columns */
@@ -414,68 +419,173 @@ p {
 
 /* Changes settings at 768px screen size to 1023px screen size*/
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    
-    #whitebox {
-        /* display: flex; */
-        /* flex-direction: row; */
+
+    /* Changes the para text font size */
+    p {
+        font-size: 0.85rem;
     }
     
+    /* Changes the orientation, position, and size of the white box */
+    #whitebox {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 75%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Changes the visibility, size, and position of the box image */
+    #box {
+        width: 15rem;
+        display: block;
+        position: absolute;
+        left: -11%;
+        top: 37%;
+        z-index: 3;
+    }
+
+    /* Changes the size and position of the left box wrapper */
+    #leftboxwrap {
+        position: absolute;
+        left: 0;
+        min-width: 50%;
+        min-height: 100%;
+    }
+
+    /* Changes the position, size, and background of the left box */
+    #leftbox {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 100%;
+        width: 100%;
+        background-image: url("../images/bg-pattern-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: 65rem 68rem;
+        background-position: 105% 64%;
+        overflow: hidden;
+        
+    }
+
+    /* Changes the visibility of the mobile woman image */
+    #womanm {
+        display: none;    
+    }
+
+    /* Changes the visibility, position, and size of the desktop woman image */
+    #womand {
+        width: 120%;
+        display: block;
+        position: absolute;
+        left: -20%;
+        top: 18%;
+        z-index: -2;
+    }
+
+    /* Changes the size and padding in the right box */
+    #rightbox {
+        width: 50%;
+        padding: 5rem 5rem 5rem 5rem;
+    }
+
+    /* Changes the alignment and margin of the heading in the right box */
+    #heading {
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
 }
 
 
 /* Changes settings at 1024px screen size */
 @media only screen and (min-width: 1024px) {
 
+    /* Changes the em base of the page */
     html {
-        /* font-size: 15px; */
+        font-size: 15px;
     }
     
+    /* Changes the para text font size */
+    p {
+        font-size: 0.85rem;
+    }
+
+    /* Changes the orientation, position, and size of the white box */
     #whitebox {
-        /* display: flex; */
-        /* flex-direction: row; */
-        /* position: absolute; */
-        /* top: 50%; */
-        /* right: 50%; */
-        /* transform: translate(50%, -50%); */
-        /* width: 60%; */
-        /* padding: 2rem; */
-        /* margin: 0; */
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 75%;
+        padding: 0;
+        margin: 0;
     }
 
-    #leftbox {
-        /* position: absolute; */
-        /* left: -2%; */
-        /* top: 50%; */
-        /* transform: translateY(-50%); */
-        /* height: 25rem; */
-        /* width: 30rem; */
-        /* background-image: url("../images/bg-pattern-desktop.svg"); */
-        /* background-repeat: no-repeat; */
-        /* background-size: 100%; */
-        /* background-position: bottom; */
-        
-    }
-
-    #womanm {
-        /* display: none;     */
-    }
-
-    #womand {
-        /* display: block; */
-    }
-
-    #shadow {
-        /* display: block; */
-    }
-    
+    /* Changes the visibility, size, and position of the box image */
     #box {
-        /* display: block; */
+        width: 15rem;
+        display: block;
+        position: absolute;
+        left: -11%;
+        top: 37%;
+        z-index: 3;
     }
 
-    #rightbox {
-        /* margin-top: 0; */
-        /* align-self: flex-end; */
-        /* justify-self: flex-end; */
+    /* Changes the size and position of the left box wrapper */
+    #leftboxwrap {
+        position: absolute;
+        left: 0;
+        min-width: 50%;
+        min-height: 100%;
     }
-    
+
+    /* Changes the position, size, and background of the left box */
+    #leftbox {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 100%;
+        width: 100%;
+        background-image: url("../images/bg-pattern-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: 65rem 68rem;
+        background-position: 105% 64%;
+        overflow: hidden;
+    }
+
+    /* Changes the visibility of the mobile woman image */
+    #womanm {
+        display: none;    
+    }
+
+    /* Changes the visibility, position, and size of the desktop woman image */
+    #womand {
+        width: 120%;
+        display: block;
+        position: absolute;
+        left: -20%;
+        top: 8%;
+        z-index: -2;
+    }
+
+    /* Changes the size and padding in the right box */
+    #rightbox {
+        width: 50%;
+        padding: 5rem 5rem 5rem 5rem;
+    }
+
+    /* Changes the alignment and margin of the heading in the right box */
+    #heading {
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
 }

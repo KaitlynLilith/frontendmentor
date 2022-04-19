@@ -20,17 +20,19 @@
     <div id="mainbox" class="flexc row rel">
       <!-- White box: makes the white box around the content -->
       <div id="whitebox" class="rel row">
-        <!-- Left box: the top box in mobile view and left box in desktop view -->
-        <div id="leftbox" class="rel">
-          <!-- Image displayed in mobile view -->
-          <img src="images/illustration-woman-online-mobile.svg" alt="Ilustration of woman working" id="womanm">
-          <!-- Image displayed in desktop view (not displayed when the page loads) -->
-          <img src="images/illustration-woman-online-desktop.svg" alt="Ilustration of woman working" id="womand">
-          <!-- Image of box displayed in desktop view (not displayed when the page loads) -->
-          <img src="images/illustration-box-desktop.svg" alt="Illustration of box" id="box">
+        <!-- Image of box displayed in desktop view (not displayed when the page loads) -->
+        <img src="images/illustration-box-desktop.svg" alt="Illustration of box" id="box">
+        <div id="leftboxwrap" class="rel">
+          <!-- Left box: the top box in mobile view and left box in desktop view -->
+          <div id="leftbox" class="rel">
+            <!-- Image displayed in mobile view -->
+            <img src="images/illustration-woman-online-mobile.svg" alt="Ilustration of woman working" id="womanm">
+            <!-- Image displayed in desktop view (not displayed when the page loads) -->
+            <img src="images/illustration-woman-online-desktop.svg" alt="Ilustration of woman working" id="womand">
+          </div>
         </div>
         <!-- Right box: the bottom box in mobile view and right box in desktop view -->
-        <div id="rightbox" class="flexc rel">
+        <div id="rightbox" class="flexc rel row">
           <!-- FAQ heading -->
           <h1 id="heading">
             FAQ
@@ -93,7 +95,7 @@
                 <!-- Arrow button 3 -->
                 <div id="a3" class='abtn'>
                   <!-- Arrow 3 -->
-                  <img src="images/icon-arrow-down.svg" alt="Down arrow" id="a3a" c3ass="arrow reaction">
+                  <img src="images/icon-arrow-down.svg" alt="Down arrow" id="a3a" class="arrow reaction">
                 </div>
               </div>
 
