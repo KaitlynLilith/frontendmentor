@@ -1,0 +1,622 @@
+/* Imports Manrope font 500 & 700 weight */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+/* Sets universal CSS variables */
+:root {
+    /* Very Dark Grayish Blue */
+    --primary-color: hsl(217, 19%, 35%);
+     /* Desaturated Dark Blue */
+    --secondary-color: hsl(214, 17%, 51%);
+    /* Grayish Blue */
+    --tertiary-color: hsl(212, 23%, 69%);
+    /* Light Grayish Blue */
+    --quaternary-color: hsl(210, 46%, 95%);
+    --quinary-color: ;
+    --senary-color: ;
+    --septenary-color: ;
+    --octonary-color: ;
+    --nonary-color: ;
+    --denary-color: ;
+    --white: hsl(0, 0%, 100%);
+}
+
+/* Makes every element into a box that includes margins and padding. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ELEMENT FORMATTING */
+/* Place all element formatting here. */
+
+/* Effects all elements */
+html {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--quaternary-color);
+    font-size: 13px;
+}
+
+/* Effects body elements */
+body {
+    position: relative;
+}
+
+/* Formats all H1 elements */
+h1 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* Formats all p elements */
+p {
+    color: var(--secondary-color);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Formats all icons */
+i {
+    color: var(--white)
+}
+
+/* CLASS FORMATTING */
+/* Place all class formatting here. */
+
+/* Formats 2 footers */
+.footer {
+    width: 100%;
+    height: 100%;
+    padding: 1.4rem 2.25rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Formats 3 arrow buttons */
+.arrowbtn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+/* Formats 3 arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Formats 3 icon boxs */
+.ibox {
+    color: var(--quaternary-color);
+}
+
+/* Formats 3 links */
+.links {
+    
+}
+
+
+/* ID FORMATTING */
+/* Place all id formatting here. */
+
+/* Makes a foundation for all other boxes */
+#everythingbox {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Formats the main container */
+#mainbox {   
+    width: 100%;
+    height: 100%;
+}
+
+/* Formats the display box */
+#displaybox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 87%;
+    min-height: 75%;
+    border-radius: 1rem;
+    margin: 3rem 0 3rem 0;
+}
+
+/* formats the box at the top or left */
+#picturebox {
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+    min-height: 40%;
+    background-image: url('../images/drawers.jpg');
+    background-position-y: -15px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Formats the box on the bottom or right */
+#whitebox {
+    justify-content: space-between;
+    background-color: var(--white);
+    min-height: 65%;
+    border-radius: 0 0 1rem 1rem;
+    width: 100%;
+}
+
+/* Formats the box that holds the heading and para text */
+#infobox {
+    padding: 2.25rem;
+}
+
+/* Formats the heading */
+#heading {
+    margin-bottom: 1rem;
+}
+
+/* Formats the text */
+#text {
+    padding-right: 1.8rem;
+}
+
+/* Formats the main footer box that holds the changes */
+#footermain {
+    width: 100%;
+    min-width: 20%;
+    border-radius: 0 0 1rem 1rem;
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+/* Formats the footer that is visible when the page loads */
+#footer1 {
+    display: none;
+}
+
+/* Formats the show state of the footer that is visible when the page loads */
+#footer1.show {
+    display: flex;
+}
+
+/* Formats the box holding the avatar picture and avatar info */
+#avatarinfobox {
+    width: 70%;
+    justify-content: flex-start;
+}
+
+/* Formats the box holding the avatar picture */
+#avatarbox {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    overflow: hidden;
+}
+
+/* Formats the avatar image */
+#avatar {
+    width: 100%;
+}
+
+/* Formats the box holding the avatar info */
+#namedatebox {
+    justify-content: space-between;
+}
+
+/* Formats the name para text in the avatar info */
+#name {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Formats the date para text in the avatar info */
+#date {
+    color: var(--tertiary-color);
+}
+/* Formats the first circle around the arrow image */
+#arrowbtn1 {
+    display: none;
+    background-color: var(--quaternary-color);
+}
+
+/* Formats the show state of the first circle around the arrow image */
+#arrowbtn1.show {
+    display: flex;
+}
+
+/* Formats the first arrow image */
+#arrow1 {
+    
+}
+
+/* Formats the third circle around the arrow image */
+#arrowbtn3 {
+    display: none;
+    background-color: var(--secondary-color);
+}
+
+/* Formats the show state of the third circle around the arrow image */
+#arrowbtn3.show {
+    display: flex;
+}
+
+/* Formats the third arrow image */
+#arrow3 {
+    
+}
+
+/* Formats the footer that is invisible when the page loads */
+#footer2 {
+    display: none;
+    background-color: var(--primary-color);
+    z-index: 3;
+}
+
+/* Formats the show state of the footer that is invisible when the page loads */
+#footer2.show {
+    display: flex;
+}
+
+/* Formats the box inside footer 2 */
+#insidebox {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Formats the box holding share and the social media icons */
+#sharebox {
+    width: 65%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Formats the share para text */
+#share {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--tertiary-color);
+    letter-spacing: 0.5rem;
+}
+
+/* Formats the box holding the social media links */
+#socialbox {
+    width: 50%;
+    justify-content: space-between;
+    color: var(--quaternary-color);
+    font-size: 1.75rem;
+}
+
+/* Formats the box holding the facebook link and icon */
+#facebookbox {
+
+}
+
+/* Formats the facebook icon */
+#facebook {
+    
+}
+
+/* Formats the box holding the twitter link and icon */
+#twitterbox {
+
+}
+
+/* Formats the twitter icon */
+#twitter {
+
+}
+
+/* Formats the box holding the pinterest link and icon */
+#pinterestbox {
+
+}
+
+/* Formats the pinterest icon */
+#pinterest {
+
+}
+
+/* Formats the second circle around the arrow image */
+#arrowbtn2 {
+    background-color: var(--secondary-color);
+}
+
+/* Formats the second arrow image */
+#arrow2 {
+    color: var(--white);
+}
+
+
+/* Responsive CSS */
+
+/* Allows elements to be stacked in rows without filling all 12 columns */
+.row::after,.row::before {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Makes a flex row */
+.flexr {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Makes a flex column */
+.flexc {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Makes flex elements centered */
+.fcenter {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gives elements relative position */
+.rel {
+    position: relative;
+}
+
+/* Changes settings at 768px screen size to 1023px screen size*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* Changes the em base of the page */
+    html {
+        font-size: 15px;
+    }
+
+    /* Changes the para text font size */
+    p {
+        font-size: 0.85rem;
+    }
+
+    /* Changes the size of the arrows */
+    .arrow {
+        width: 1rem;
+    }
+
+    /* Changes the padding of the footers */
+    .footer {
+        padding: 0 2.25rem 2.25rem 2.25rem;
+    }
+
+    /* Changes the size of the arrow button */
+    .arrowbtn {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    /* Changes the size of the arrow image */
+    .arrow {
+        width: 1rem;
+    }
+    
+    /* Changes the orientation, position, overflow, margin, and size of the display box */
+    #displaybox {
+        flex-direction: row;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        min-width: 60%;
+        max-width: 80%;
+        min-height: 30%;
+        max-height: 65%;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    /* Changes the background, size, and border of the picture box */
+    #picturebox {
+        border-radius: 1rem 0 0 1rem;
+        width: 35%;
+        background-position: left;
+        background-size: auto 100%;
+    }
+
+    /* Changes the size and border of the white box */
+    #whitebox {
+        width: 55%;
+        border-radius: 0 1rem 1rem 0;
+    }
+
+    /* Changes the padding of the info box */
+    #infobox {
+        padding: 2.25rem 2.25rem 1.5rem 2.25rem;
+    }
+
+    /* Changes the border of the main footer box */
+    #footermain {
+        border-radius: 0 0 1rem 0;
+        overflow: visible;
+    }
+
+    /* Changes the size of the avatar box */
+    #avatarbox {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    /* Changes the size, position, border, and padding */
+    #footer2 { 
+        width: 15rem;
+        height: fit-content;
+        position: absolute;
+        top: -100%;
+        right: -10%;
+        border-radius: 0.75rem;
+        padding: 1rem;
+    }
+    
+    /* Changes the size and spacing of the share box */
+    #sharebox {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    /* changes the size and spacing of the share para text */
+    #share {
+        font-size: 0.8rem;
+        letter-spacing: 0.4rem;
+    }
+
+    /* Changes the size and font size of the social box */
+    #socialbox {
+        width: 45%;
+        font-size: 1.4rem;
+    }   
+    
+    /* Changes the display property of the second arrow button */
+    #arrowbtn2 {
+        display: none;
+    }
+
+    /* Creates the text bubble pointer for footer 2 */
+    #pointer {
+        height: 1.2rem;
+        width: 1.2rem;
+        background-color: var(--primary-color);
+        margin: 0 auto;
+        transform: rotate(45deg);
+        bottom: -15%;
+        position: absolute;
+        left: 50%;
+        z-index: 0;
+    }
+}
+
+
+/* Changes settings at 1024px screen size */
+@media only screen and (min-width: 1024px) {
+
+    /* Changes the em base of the page */
+    html {
+        font-size: 18px;
+    }
+    
+    /* Changes the para text font size */
+    p {
+        font-size: 0.85rem;
+    }
+
+    /* Changes the size of the arrows */
+    .arrow {
+        width: 1rem;
+    }
+
+    /* Changes the padding of the footers */
+    .footer {
+        padding: 0 2.25rem 2.25rem 2.25rem;
+    }
+
+    /* Changes the size of the arrow button */
+    .arrowbtn {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    /* Changes the size of the arrow image */
+    .arrow {
+        width: 1rem;
+    }
+
+    /* Changes the orientation, position, overflow, margin, and size of the display box */
+    #displaybox {
+        flex-direction: row;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        min-width: 60%;
+        max-width: 75%;
+        min-height: 30%;
+        max-height: 55%;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    /* Changes the background, size, and border of the picture box */
+    #picturebox {
+        border-radius: 1rem 0 0 1rem;
+        width: 35%;
+        background-position: left;
+        background-size: auto 100%;
+    }
+
+    /* Changes the size and border of the white box */
+    #whitebox {
+        width: 55%;
+        border-radius: 0 1rem 1rem 0;
+    }
+
+    /* Changes the padding of the info box */
+    #infobox {
+        padding: 2.25rem 2.25rem 1.5rem 2.25rem;
+    }
+
+    /* Changes the border of the main footer box */
+    #footermain {
+        border-radius: 0 0 1rem 0;
+        overflow: visible;
+    }
+
+    /* Changes the size of the avatar box */
+    #avatarbox {
+        width: 3rem;
+        height: 3rem;
+    }    
+
+    /* Changes the size, position, border, and padding */
+    #footer2 { 
+        width: 15rem;
+        height: fit-content;
+        position: absolute;
+        top: -100%;
+        right: -10%;
+        border-radius: 0.75rem;
+        padding: 1rem;
+    }
+
+    /* Changes the size and spacing of the share box */
+    #sharebox {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    /* Changes the size and spacing of the share box */
+    #share {
+        font-size: 0.8rem;
+        letter-spacing: 0.4rem;
+    }
+
+    /* Changes the size and font size of the social box */
+    #socialbox {
+        width: 45%;
+        font-size: 1.4rem;
+    }
+
+    /* Changes the display property of the second arrow button */
+    #arrowbtn2 {
+        display: none;
+    }
+
+    /* Creates the text bubble pointer for footer 2 */
+    #pointer {
+        height: 1.2rem;
+        width: 1.2rem;
+        background-color: var(--primary-color);
+        margin: 0 auto;
+        transform: rotate(45deg);
+        bottom: -15%;
+        position: absolute;
+        left: 50%;
+        z-index: 0;
+    }
+}
+

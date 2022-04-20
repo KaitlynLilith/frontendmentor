@@ -2,35 +2,129 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
+  <!-- Imports the CSS for the page --> 
+  <link rel="stylesheet" href="styles/index.css">
+
+  <!-- Imports FontAwesome icon library -->
+  <script src="https://kit.fontawesome.com/5d5f7bf628.js" crossorigin="anonymous"></script>
+
+  <!-- Icon and Title: Shows up in browser tab -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Article preview component</title>
+  <title>Frontend Mentor | Article preview component| Katie Fox</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
-
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
-
-  Michelle Appleton
-  28 Jun 2020
-
-  Share
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <!-- Makes an invisible box around everything -->
+  <div id="everythingbox" class="flexr row rel">
+    <!-- Main box: holds main content -->
+    <div id="mainbox" class="flexc fcenter row rel">
+      <!-- Display box: makes the white box around the content -->
+      <div id="displaybox" class="rel row">
+        <!-- Picture box: holds the picture of the dresser with the accessories as the background -->
+        <div id="picturebox" class="rel">
+        </div>
+        <!-- White box: holds the info box, avatar box, and share box -->
+        <div id="whitebox" class="flexc rel">
+          <!-- Info box: holds the heading and some para text -->
+          <div id="infobox" class="flexc">
+            <!-- Heading -->
+            <h1 id="heading">
+              Shift the overall look and feel by adding these wonderful touches to furniture in your home
+            </h1>
+            <!-- Para text -->
+            <p id="text">
+              Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.
+            </p>
+          </div>
+          <!-- Footer main: holds two footers that replace one another in mobile view -->
+          <div id="footermain" class="flexr rel">
+            <!-- Footer 1: initially visible -->
+            <div id="footer1" class="footer flexr rel show">
+              <!-- Avatar/info box: holds avatar, info, and share button -->
+              <div id="avatarinfobox" class="flexr">
+                <!-- Avatar box: holds the avatar image -->
+                <div id="avatarbox">
+                  <!-- Avatar image -->
+                  <img src="images/avatar-michelle.jpg" alt="Avatar of Michelle Appleton" id="avatar">
+                </div>
+                <!-- Name/date box: holds name and date para text -->
+                <div id="namedatebox" class="flexc">
+                  <!-- Name para text -->
+                  <p id="name">
+                    Michelle Appleton
+                  </p>
+                  <!-- Date para text -->
+                  <p id="date">
+                    28 Jun 2020
+                  </p>
+                </div>
+              </div>
+              <!-- Arrow button 1: holds the arrow to be clicked -->
+              <div id="arrowbtn1" class="arrowbtn rel show" onclick="shareShow(1)">
+                <!-- Arrow 1 -->
+                <img src="images/icon-share.svg" alt="Arrow" id="arrow1" class="arrow">
+              </div>
+              <!-- Arrow button 3: holds the arrow to be clicked -->
+              <div id="arrowbtn3" class="arrowbtn rel" onclick="shareShow(3)">
+                <!-- Arrow 3 -->
+                <img src="images/icon-share-white.svg" alt="Arrow" id="arrow3" class="arrow">
+              </div>
+            </div>
+            <!-- Footer 2: initially invisible -->
+            <div id="footer2" class="flexr footer rel">
+              <div id="insidebox" class="flexr rel">
+                <!-- Share box: holds share words and social media links -->
+                <div id="sharebox" class="flexr rel">
+                  <!-- Share para text -->
+                  <p id="share">
+                    Share
+                  </p>
+                  <!-- Social box: holds social media links -->
+                  <div id="socialbox" class="flexr rel">
+                    <!-- Facebook box: holds link and icon -->
+                    <div id="facebookbox" class="ibox rel">
+                      <!-- Facebook link -->
+                      <a href="www.facebook.com" class="links">
+                        <!-- Facebook icon -->
+                        <i class="fa-brands fa-facebook-square" id="facebook"></i>
+                      </a>
+                    </div>
+                    <!-- Twitter box: holds link and icon -->
+                    <div id="twitterbox" class="ibox rel">
+                      <!-- Twitter link -->
+                      <a href="www.twitter.com" class="links">
+                        <!-- Twitter icon -->
+                        <i class="fa-brands fa-twitter" id="twitter"></i>
+                      </a>
+                    </div>
+                    <!-- Pinterest box: holds link and icon -->
+                    <div id="pinterestbox" class="ibox rel">
+                      <!-- Pinterest link -->
+                      <a href="www.pinterest.com" class="links">
+                        <!-- Pinterest icon -->
+                        <i class="fa-brands fa-pinterest" id="pinterest"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Arrow button 2: holds the arrow to be clicked -->
+                <div id="arrowbtn2" class="arrowbtn rel" onclick="shareShow(2)">
+                  <!-- Arrow 2 -->
+                  <img src="images/icon-share-white.svg" alt="Arrow" id="arrow2" class="arrow">
+                </div>  
+              </div>
+              <!-- Pointer: adds a text bubble pointer to footer 2 -->
+              <div id="pointer" class=""></div>
+            </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- Imports the Javascript for the page --> 
+  <script src="scripts/index.js"></script> 
 </body>
-</html>
+</html> 
+

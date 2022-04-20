@@ -47,7 +47,7 @@ X https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUm
 
 X https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam
 
- https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT
+X https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT
 
  https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0
 
