@@ -1,0 +1,427 @@
+/* Imports Josefin Sans font 300, 400 & 600 weight */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+/* Sets universal CSS variables */
+:root {
+    /* Desaturated Red */
+    --primary-color: hsl(0, 36%, 70%);
+     /* Soft Red */
+    --secondary-color: hsl(0, 93%, 68%);
+    /* Dark Grayish Red */
+    --tertiary-color: hsl(0, 6%, 24%);
+    /* Gradients: Linear, 135deg */
+    --quaternary-color: hsl(0, 0%, 100%);
+    --quinary-color: hsl(0, 100%, 98%);
+    --senary-color: hsl(0, 80%, 86%);
+    --septenary-color: hsl(0, 74%, 74%);
+    --octonary-color: ;
+    --nonary-color: ;
+    --denary-color: ;
+    --white: hsl(0, 0%, 100%);
+}
+
+/* Makes every element into a box that includes margins and padding. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ELEMENT FORMATTING */
+/* Place all element formatting here. */
+
+/* Effects all elements */
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: var(--quinary-color);
+    font-size: 16px;
+}
+
+/* Effects body elements */
+body {
+    position: relative;
+}
+
+/* Formats all H1 elements */
+h1 {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/* Formats all p elements */
+p {
+    color: var(--primary-color);
+    line-height: 1.7;
+    font-size: 0.87rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+/* CLASS FORMATTING */
+/* Place all class formatting here. */
+
+/* Formats 3 headings */
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    padding: 0.1rem;
+}
+
+/* Formats 2 black headings */
+.black {
+    color: var(--tertiary-color);
+    font-weight: 600;
+}
+
+
+/* ID FORMATTING */
+/* Place all id formatting here. */
+
+/* Makes a foundation for all other boxes */
+#everythingbox {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Formats the main container */
+#mainbox {   
+    width: 100%;
+    height: 100%;
+}
+
+/* Formats the display box */
+#displaybox{
+    width: 100%;
+}
+
+/* Formats the box holding the logo */
+#logobox {
+padding: 1.7rem;
+grid-area: logobox;
+}
+
+/* Formats the logo image */
+#logo {
+    width: 6.5rem;
+}
+
+/* Formats the box holding the hero image of the girl */
+#picturebox {
+    height: 250px;
+    grid-area: picturebox;
+    background-image: url(../images/hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Formats the box holding the text and form */
+#contentbox {
+    margin: 2rem;
+    grid-area: contentbox;
+}
+
+/* Formats the box holding 3 headings */
+#headingbox {
+    margin-top: 1rem;
+}
+
+/* Formats the first word of the heading */
+#headingRed {
+    color: var(--primary-color);
+}
+
+/* Formats the second word of the heading */
+#headingBlack1 {
+
+}
+
+/* Formats the third word of the heading */
+#headingBlack2 {
+
+}
+
+/* Formats the box holding the para text below the heading */
+#parabox {
+
+}
+
+/* Formats the para text below the heading */
+#para {
+
+}
+
+/* Formats the box around the form */
+#inputbox {
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+/* Formats the form container */
+#emailform {
+
+}
+
+/* Formats the box around the text input */
+#inputtext {
+    justify-content: flex-start;
+    align-items: center;
+    border: 0.1rem solid var(--senary-color);
+    border-radius: 2rem;
+    /* padding: 0.8rem 1.5rem; */
+}
+
+/* Formats the show state of the box around the text input */
+#inputtext.show {
+    border: 0.2rem solid var(--secondary-color);
+}
+
+/* Formats the text input */
+#email {
+    background-color: var(--quinary-color);
+    border-radius: 2rem;
+    border: none;
+    width: 100%;
+    padding: 0.8rem 0 0.8rem 1rem;
+}
+
+/* Formats the placeholder text in the text input */
+#email::placeholder {
+    color: var(--primary-color);
+}
+
+/* Formats the focus state of the text input */
+#email:focus {
+    background-color: var(--quinary-color);
+    outline: none;
+}
+
+/* Formats the error icon */
+#erroricon {
+    position: absolute;
+    right: 20%;
+    display: none;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Formats the show state of the error icon */
+#erroricon.show {
+    display: block;
+}
+
+/* Formats the submit button */
+#submitbtn {
+    position: absolute;
+    right: -1%;
+    width: 4rem;
+    height: 2.9rem;
+    background-image: linear-gradient(135deg, var(--senary-color), var(--septenary-color)); 
+    border-radius: 2rem;
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Formats the show state of the submit button */
+#submitbtn.show {
+    background-image: linear-gradient(135deg, var(--quinary-color), var(--senary-color));
+}
+
+/* Formats the arrow icon in the submit button */
+#arrow {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+/* Formats the error message */
+#errormsg {
+    display: none;
+    color: var(--secondary-color);
+    font-size: 0.75rem;
+    padding: 0rem 1rem;
+}
+
+/* Formats the show state of the error message */
+#errormsg.show {
+    display: block;
+}
+
+
+/* Responsive CSS */
+
+/* Allows elements to be stacked in rows without filling all 12 columns */
+.row::after,.row::before {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Makes a flex row */
+.flexr {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Makes a flex column */
+.flexc {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Makes flex elements centered */
+.fcenter {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Makes a grid container */
+.grid-container {
+    display: grid;
+    grid-template-areas: 'logobox'
+                        'picturebox'
+                        'contentbox';
+    grid-template-rows: auto auto auto;
+  }
+
+/* Gives elements relative position */
+.rel {
+    position: relative;
+}
+
+/* Changes settings at 768px screen size to 1023px screen size*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* Changes the em base of the page */
+    html {
+        font-size: 15px;
+    }
+
+    /* Changes the font size and alignment of the para text  */
+    p {
+        font-size: 0.85rem;
+        text-align: left;
+    }
+
+    /* Changes the arrangement and size of the grid container */
+    .grid-container {
+        display: grid;
+        grid-template-areas: 'logobox       picturebox'
+                            'contentbox picturebox';
+
+        grid-template-columns: 57% 43%;
+        grid-template-rows: 25% 75%;
+    }
+
+    /* Changes the alignment, size, spacing, and padding of 3 headings */
+    .heading {
+        text-align: left;
+        font-size: 3.2rem;
+        letter-spacing: 0.6rem;
+        padding: 0.1rem 0 0.1rem 0;
+    }
+
+    /* Changes the background of the display box */
+    #displaybox{
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: contain;
+    }
+
+    /* Changes the padding of the logo box */
+    #logobox {
+        padding: 3.5rem 8rem; 
+    }
+
+    /* Changes the size of the logo image */
+    #logo {
+        width: 7.75rem;
+    }
+    
+    /* Changes the size and background of the picture box */
+    #picturebox {
+        width: 100%;
+        height: 767px;
+        background-image: url(../images/hero-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+    /* Changes the margins of the content box */
+    #contentbox {
+        margin: 0 8rem;
+    }
+}
+
+
+/* Changes settings at 1024px screen size */
+@media only screen and (min-width: 1024px) {
+
+    /* Changes the em base of the page */
+    html {
+        font-size: 20px;
+    }
+    
+    /* Changes the font size and alignment of the para text  */
+    p {
+        font-size: 0.85rem;
+        text-align: left;
+    }
+
+    /* Changes the arrangement and size of the grid container */
+    .grid-container {
+        display: grid;
+        grid-template-areas: 'logobox       picturebox'
+                            'contentbox picturebox';
+
+        grid-template-columns: 57% 43%;
+        grid-template-rows: 25% 75%;
+    }
+
+    /* Changes the alignment, size, spacing, and padding of 3 headings */
+    .heading {
+        text-align: left;
+        font-size: 3.2rem;
+        letter-spacing: 0.6rem;
+        padding: 0.1rem 0 0.1rem 0;
+    }
+
+    /* Changes the background of the display box */
+    #displaybox{
+        width: 100%;
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: contain;
+    }
+
+    /* Changes the padding of the logo box */
+    #logobox {
+        padding: 3.5rem 8rem; 
+    }
+
+    /* Changes the size of the logo image */
+    #logo {
+        width: 7.75rem;
+    }
+    
+    /* Changes the size and background of the picture box */
+    #picturebox {
+        width: 100%;
+        height: 800px;
+        grid-area: picturebox;
+        background-image: url(../images/hero-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: contain;
+    }
+
+    /* Changes the margins of the content box */
+    #contentbox {
+        margin: 0 8rem;
+    }
+}

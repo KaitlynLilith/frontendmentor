@@ -2,32 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
+  <!-- Imports the CSS for the page --> 
+  <link rel="stylesheet" href="styles/index.css">
+
+  <!-- Icon and Title: Shows up in browser tab -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <title>Frontend Mentor | Base Apparel coming soon page | Katie Fox</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  We're coming soon
-
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
-  Email Address
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+  <!-- Makes an invisible box around everything -->
+  <div id="everythingbox" class="row rel">
+    <!-- Main box: holds main content -->
+    <div id="mainbox" class="row rel">
+      <!-- Display box: makes the box around the content -->
+      <div id="displaybox" class="rel row grid-container">
+        <!-- Logo box: holds logo image -->
+        <div id="logobox">
+          <!-- Logo image -->
+          <img src="images/logo.svg" alt="Company logo" id="logo">
+        </div>
+        <!-- Picture box: holds hero image of girl -->
+        <div id="picturebox"></div>
+        <!-- Content box: holds heading, para text, and form -->
+        <div id="contentbox" class="flexc rel">
+          <!-- Heading box: holds 3 headings -->
+          <div id="headingbox">
+            <h1 id="headingRed" class="heading">
+                We're
+            </h1>
+            <h1 id="headingBlack1" class="heading black">
+              coming
+            </h1>
+            <h1 id="headingBlack2" class="heading black">
+              soon
+            </h1>
+          </div>
+          <!-- Para box: holds para text -->
+          <div id="parabox">
+            <!-- Para text -->
+            <p id="para">
+              Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
+            </p>
+          </div>
+          <!-- Input box: holds form containing input, error icon, and submit button -->
+          <div id="inputbox" class="rel">
+            <!-- Email form -->
+            <form action="" id="emailform" class="rel">
+              <!-- Input text box: holds input field, error icon, and submit button -->
+              <div id="inputtext" class="flexr rel target">
+                <!-- Text input -->
+                <input type="text" id="email" name="email" placeholder="Email Address"> 
+                <!-- Error icon -->
+                <img src="images/icon-error.svg" alt="Error icon" id="erroricon" class="target">
+                <!-- Submit button -->
+                <div id="submitbtn" onclick="emailValidation()" class="rel target">
+                  <!-- Arrow icon -->
+                  <img src="images/icon-arrow.svg" alt="Arrow icon" id="arrow">
+                </div> 
+              </div>
+            </form>
+          </div>
+          <!-- Error message -->
+          <div id="errormsg" class="target">
+            Please provide a valid email
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Imports the Javascript for the page --> 
+  <script src="scripts/index.js"></script> 
 </body>
 </html>
