@@ -1,0 +1,372 @@
+/* Imports Josefin Sans font 300, 400 & 600 weight */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Sets universal CSS variables */
+:root {
+    /* Red */
+    --primary-color: hsl(0, 100%, 74%);
+     /* Green */
+    --secondary-color: hsl(154, 59%, 51%);
+    /* Blue */
+    --tertiary-color: hsl(248, 32%, 49%);
+    /* Dark Blue */
+    --quaternary-color: hsl(249, 10%, 26%);
+    /* Grayish Blue */
+    --quinary-color: hsl(246, 25%, 77%);
+    --senary-color: hsla(249, 10%, 26%, 0.25);
+    --septenary-color: hsl(154, 75%, 42%);
+    --octonary-color: ;
+    --nonary-color: ;
+    --denary-color: ;
+    --white: hsl(0, 0%, 100%);
+}
+
+/* Makes every element into a box that includes margins and padding. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ELEMENT FORMATTING */
+/* Place all element formatting here. */
+
+/* Effects all elements */
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+/* Effects body elements */
+body {
+    position: relative;
+}
+
+/* Effects all H1 elements */
+h1 {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+/* Effects all P elements */
+p {
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+/* CLASS FORMATTING */
+/* Place all class formatting here. */
+
+/* Formats 4 boxes holding an input, error icon, and error message */
+.inputerrorbox {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Formats 4 boxes holding an input and error icon */
+.inputbox {
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    border: 1px solid var(--quinary-color);
+    border-radius: 0.25rem;
+    padding: 0.2rem;
+}
+
+.inputbox.show {
+    border: 2px solid var(--primary-color);
+}
+
+/* Formats 4 inputs */
+.input {
+    width: 90%;
+    padding: 1.1rem;
+    border: none;
+}
+
+/* Formats the placeholder text in 4 imputs */
+.input::placeholder {
+    color: var(--quaternary-color);
+    font-weight: 700;
+    font-size: 0.9rem; 
+}
+
+.input:focus {
+    outline: none;
+}
+
+/* Formats 4 error icons */
+.icon {
+    display: none;
+    height: 1.4rem;
+}
+
+.icon.show {
+    display: block;
+}
+
+/* Formats 4 boxes holding an error message */
+.errormsg {
+    display: none;
+    color: var(--primary-color);
+    font-size: 0.5rem;
+    margin-top: 0.3rem;
+    text-align: right;
+    font-style: italic;
+}
+
+.errormsg.show {
+    display: block;
+}
+
+
+/* ID FORMATTING */
+/* Place all id formatting here. */
+
+/* Formats the box holding everything */
+#everythingbox {
+    width: 100%;
+    background-color: var(--primary-color);
+    background-image: url(../images/bg-intro-mobile.png);
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+/* Formats the box holding the main content */
+#mainbox {
+    width: 87%;
+    margin: 4rem 0 5rem 0;
+}
+
+/* Formats the box at the top of the mobile view or to the left of the desktop view */
+#topleftbox {
+    margin: 0.5rem;
+}
+
+/* Formats the heading in the top box */
+#heading {
+    margin: 1rem 0 1rem 0;
+}
+
+/* Formats the para text in the top box */
+#info {
+    
+}
+
+/* Formats the box at the bottom of the mobile view or to the right of the desktop view */
+#bottomrightbox {
+    margin-top: 4rem;
+}
+
+/* Formats the blue box in the bottom box */
+#bluebox {
+    background-color: var(--tertiary-color);
+    padding: 1.2rem 3rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem var(--senary-color);
+}
+
+#paratext {
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+/* Formats the bold text in the blue box */
+#bold {
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    
+}
+
+/* Formats the white box in the bottom box */
+#whitebox {
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.6rem var(--senary-color);
+}
+
+/* Formats the sign-up form */
+#signupform {
+    width: 100%;
+}
+
+/* Formats the first input-error box in the white box */
+#inputerrorbox1 {
+    
+}
+
+/* Formats the first input box in the white box */
+#inputbox1 {
+    
+}
+
+/* Formats the First Name input field */
+#firstName {
+    
+}
+
+/* Formats the first error icon in the white box */
+#icon1 {
+    
+}
+
+/* Formats the first error message in the white box */
+#errormsg1 {
+    
+}
+
+/* Formats the second input-error box in the white box */
+#inputerrorbox2 {
+    
+}
+
+/* Formats the second input box in the white box */
+#inputbox2 {
+    
+}
+
+/* Formats the Last Name input field */
+#lastName {
+    
+}
+
+/* Formats the second error icon in the white box */
+#icon2 {
+    
+}
+
+/* Formats the second error message in the white box */
+#errormsg2 {
+    
+}
+
+/* Formats the third input-error box in the white box */
+#inputerrorbox3 {
+    
+}
+
+/* Formats the third input box in the white box */
+#inputbox3 {
+    
+}
+
+/* Formats the Email input field */
+#email {
+    
+}
+
+/* Formats the third error icon in the white box */
+#icon3 {
+    
+}
+
+/* Formats the third error message in the white box */
+#errormsg3 {
+    
+}
+
+/* Formats the fourth input-error box in the white box */
+#inputerrorbox4 {
+    
+}
+
+/* Formats the fourth input box in the white box */
+#inputbox4 {
+    
+}
+
+/* Formats the Password input field */
+#password {
+    
+}
+
+/* Formats the fourth error icon in the white box */
+#icon4 {
+    
+}
+
+/* Formats the fourth error message in the white box */
+#errormsg4 {
+    
+}
+
+/* Formats the submit button at the bottom of the form */
+#submitbtn {
+    background-color: var(--secondary-color);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    color: var(--white);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 0.2rem var(--septenary-color);
+}
+
+#submitbtn:active {
+    opacity: 0.7;
+}
+
+/* Formats the terms box at the bottom of the form */
+#termsbox {
+    color: var(--quinary-color);
+    font-size: 0.7rem;
+    padding: 0 0.7rem;
+    line-height: 1.9;
+}
+
+/* Formats the terms span at the bottom of the form */
+#terms {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+
+/* Responsive CSS */
+
+/* Makes a flex row */
+.flexr {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Makes a flex column */
+.flexc {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Makes flex elements centered */
+.fcenter {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gives elements relative position */
+.rel {
+    position: relative;
+}
+
+/* Changes settings at 768px screen size to 1023px screen size*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* Changes the em base of the page */
+    html {
+        font-size: ;
+    }
+}
+
+/* Changes settings at 1024px screen size */
+@media only screen and (min-width: 1024px) {
+
+    /* Changes the em base of the page */
+    html {
+        font-size: ;
+    }
+    
+}
