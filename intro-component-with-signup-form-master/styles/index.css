@@ -76,25 +76,38 @@ p {
     padding: 0.2rem;
 }
 
+/* Formats the show state of the 4 boxes holding an input and error icon */
 .inputbox.show {
     border: 2px solid var(--primary-color);
 }
 
-/* Formats 4 inputs */
+/* Formats the focus state of the 4 boxes holding an input and error icon */
+.inputbox.focus {
+    border: 1px solid var(--tertiary-color);
+}
+
+/* Formats 4 input fields */
 .input {
     width: 90%;
     padding: 1.1rem;
     border: none;
 }
 
-/* Formats the placeholder text in 4 imputs */
+/* Formats the show state of 4 input fields */
+.input.show {
+    color: var(--primary-color);
+}
+
+/* Formats the placeholder text in 4 input fields */
 .input::placeholder {
     color: var(--quaternary-color);
     font-weight: 700;
     font-size: 0.9rem; 
 }
 
+/* Formats the focus state of 4 input fields */
 .input:focus {
+    background-color: var(--white);
     outline: none;
 }
 
@@ -104,6 +117,7 @@ p {
     height: 1.4rem;
 }
 
+/* Formats the show state of 4 error icons */
 .icon.show {
     display: block;
 }
@@ -118,6 +132,7 @@ p {
     font-style: italic;
 }
 
+/* Formats the show state of 4 boxes holding an error message */
 .errormsg.show {
     display: block;
 }
@@ -137,6 +152,8 @@ p {
 
 /* Formats the box holding the main content */
 #mainbox {
+    display: flex;
+    flex-direction: column;
     width: 87%;
     margin: 4rem 0 5rem 0;
 }
@@ -169,7 +186,8 @@ p {
     box-shadow: 0 0.5rem var(--senary-color);
 }
 
-#paratext {
+/* Formats the text in the blue button */
+#text {
     color: var(--white);
     font-size: 0.9rem;
 }
@@ -178,7 +196,6 @@ p {
 #bold {
     font-weight: 700;
     letter-spacing: 0.05rem;
-    
 }
 
 /* Formats the white box in the bottom box */
@@ -308,6 +325,7 @@ p {
     box-shadow: 0 0.2rem var(--septenary-color);
 }
 
+/* Formats the active state of the submit button at the bottom of the form */
 #submitbtn:active {
     opacity: 0.7;
 }
@@ -355,18 +373,99 @@ p {
 /* Changes settings at 768px screen size to 1023px screen size*/
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 
-    /* Changes the em base of the page */
-    html {
-        font-size: ;
+    /* Changes the font size of H1 elements */
+    h1 {
+        font-size: 2rem;
+    }
+
+    /* Changes the padding of 4 input text boxes */
+    .input {
+        padding: 0.6rem;
+    }
+
+    /* Changes the size and background image of the page */
+    #everythingbox {
+        height: 100vh;
+        background-image: url(../images/bg-intro-desktop.png);
+    }
+
+    /* Changes the orientation, size, margins, position, and space between children of the main box */
+    #mainbox {
+        flex-direction: row;
+        width: 87%;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        justify-content: space-between;
+    }
+
+    /* Changes the margin, size, and text alignment of the top-left box */
+    #topleftbox {
+        margin: 0;
+        width: 47%;
+        text-align: left;
+    }
+
+    /* Changes the margins of the main heading */
+    #heading {
+        margin: 0 0 1rem 0;
+    }
+
+    /* Changes the margins and size of the bottom-right box */
+    #bottomrightbox {
+        margin-top: 0;
+        width: 50%;
     }
 }
 
 /* Changes settings at 1024px screen size */
 @media only screen and (min-width: 1024px) {
 
-    /* Changes the em base of the page */
-    html {
-        font-size: ;
+    /* Changes the font size of H1 elements */
+    h1 {
+        font-size: 3rem;
     }
-    
+
+    /* Changes the padding of 4 input text boxes */
+    .input {
+        padding: 0.9rem;
+    }
+
+    /* Changes the size and background image of the page */
+    #everythingbox {
+        height: 100vh;
+        background-image: url(../images/bg-intro-desktop.png);
+    }
+
+    /* Changes the orientation, size, margins, position, and space between children of the main box */
+    #mainbox {
+        flex-direction: row;
+        width: 80%;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        justify-content: space-between;
+    }
+
+    /* Changes the margin, size, and text alignment of the top-left box */
+    #topleftbox {
+        margin: 0;
+        width: 48%;
+        text-align: left;
+    }
+
+    /* Changes the margin of the main heading */
+    #heading {
+        margin: 0 0 1rem 0;
+    }
+
+    /* Changes the margins and size of the bottom-right box */
+    #bottomrightbox {
+        margin-top: 0;
+        width: 48%;
+    }
 }
