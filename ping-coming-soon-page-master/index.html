@@ -2,33 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
+  <!-- Imports the CSS for the page --> 
+  <link rel="stylesheet" href="styles/index.css">
+
+  <!-- Imports FontAwesome icon library -->
+  <script src="https://kit.fontawesome.com/5d5f7bf628.js" crossorigin="anonymous"></script>
+
+  <!-- Icon and Title: Shows up in browser tab -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Ping coming soon page</title>
+  <title>Frontend Mentor | Ping coming soon page | Katie Fox</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <!-- Makes an invisible box around everything -->
+  <div id="everythingbox" class="rel flexc fcenter">
+    <!-- Main box: holds main content -->
+    <div id="mainbox" class="rel flexc fcenter">
+      <!-- Top box: holds logo, heading, and subheading -->
+      <div id="topbox" class="rel flexc fcenter">
+        <!-- Logo box: holds logo image -->
+        <div id="logobox" class="rel flexc fcenter">
+        <!-- Logo image -->
+        <img src="images/logo.svg" alt="Logo image" id="logo" class="rel">
+        </div>
+        <!-- Heading at the top of the page -->
+        <h1 id="heading" class="rel">
+          We are launching 
+          <span id="bold">
+          soon!
+        </span>
+        </h1>
+        <!-- Subheading at the top of the page -->
+        <h4 id="subheading" class="rel">
+          Subscribe and get notified
+        </h4>
+      </div>
+      <!-- Input button box: holds the form with email input and submit button -->
+      <div id="inputbtnbox" class="rel target target1 target2">
+        <!-- Email form -->
+        <form action="" id="emailform" class="rel flexc fcenter">
+          <!-- Input box: holds the email input -->
+          <div id="inputbox" class="rel target target1 target2">
+            <!-- Email input -->
+            <input type="text" id="email" class="rel" placeholder="Your email address...">
+          </div>
+          <!-- Empty box: holds the error text for empty string -->
+          <div id="emptybox" class="rel errormsg target target1">
+            Whoops! It looks like you forgot to add your email
+          </div>
+          <!-- Error box: holds the error text for formatting error -->
+          <div id="errorbox" class="rel errormsg target target2">
+            Please provide a valid email address
+          </div>
+        </form>
+        <!-- Submit button -->
+        <div id="submitbtn" class="rel target target1 target2" onclick="emailValidation()">
+          Notify Me
+        </div>
+      </div>
+      <!-- Mock-up box: holds mock-up image -->
+      <div id="mockupbox" class="rel target target1 target2">
+        <!-- Mock-up image -->
+        <img src="images/illustration-dashboard.png" alt="Mock-up illustration" id="mockup" class="rel">
+      </div>
+      <!-- Footer: holds social media links and copyright info -->
+      <div id="footer" class="rel flexc">
+        <!-- Social box: holds 3 social media links -->
+        <div id="socialbox" class="rel flexr">
+          <!-- Facebook Link -->
+          <a href="" id="facebooklink" class="link">
+            <!-- Facebook box: holds facebook icon -->
+            <div id="facebookbox" class="rel iconbox">
+              <!-- Facebook icon -->
+              <i class="fa-brands fa-facebook-f icon"></i>
+            </div>
+          </a>
+          <!-- Twitter Link -->
+          <a href="" id="twitterlink" class="link">
+            <!-- Twitter box: holds twitter icon -->
+            <div id="twitterbox" class="rel iconbox">
+            <!-- Twitter icon -->
+            <i class="fa-brands fa-twitter icon"></i>
+            </div>
+          </a>
+          <!-- Instagram Link -->
+          <a href="" id="instagramlink" class="link">
+            <!-- Instagram box: holds instagram icon -->
+            <div id="instagrambox" class="rel iconbox">
+            <!-- Instagram icon -->
+            <i class="fa-brands fa-instagram icon"></i>
+            </div>
+          </a>
+        </div>
+        <!-- Copyright box: holds copyright info -->
+        <div id="copyright" class="rel">
+          &copy; Copyright Ping. All rights reserved.
+        </div>
+      </div>
 
-  We are launching soon!
 
-  Subscribe and get notified
+  
 
-  Notify Me
+  
 
-  &copy; Copyright Ping. All rights reserved.
+  
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+    </div>
+  </div>
+  <!-- Imports the Javascript for the page --> 
+  <script src="scripts/index.js"></script> 
 </body>
 </html>

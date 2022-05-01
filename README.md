@@ -53,4 +53,4 @@ X https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47
 
 X https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1
 
- https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da
+X https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da

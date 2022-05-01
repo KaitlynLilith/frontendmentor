@@ -1,0 +1,536 @@
+/* Imports Libre Franklin font 300, 600 & 700 weight */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+/* Sets universal CSS variables */
+:root {
+    /* Blue */
+    --primary-color: hsl(223, 87%, 63%);
+     /* Pale Blue */
+    --secondary-color: hsl(223, 100%, 88%);
+    /* Light Red */
+    --tertiary-color: hsl(354, 100%, 66%);
+    /* Gray */
+    --quaternary-color: hsl(0, 0%, 59%);
+    /* Very Dark Blue */
+    --quinary-color: hsl(209, 33%, 12%);
+    --senary-color: ;
+    --septenary-color: ;
+    --octonary-color: ;
+    --nonary-color: ;
+    --denary-color: ;
+    --white: hsl(0, 0%, 100%);
+}
+
+/* Makes every element into a box that includes margins and padding. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ELEMENT FORMATTING */
+/* Place all element formatting here. */
+
+/* Effects all elements */
+html {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+    color: var(--quinary-color);
+}
+
+/* Effects body elements */
+body {
+    position: relative;
+}
+
+/* Effects all H1 elements */
+h1 {
+    font-size: 1.1rem;
+}
+
+/* Effects all P elements */
+p {
+    
+}
+
+/* Effects all A elements */
+a {
+
+}
+
+/* Effects all I elements */
+i {
+    
+}
+
+
+/* CLASS FORMATTING */
+/* Place all class formatting here. */
+
+/* Formats 2 error messages */
+.errormsg {
+    display: none;
+    width: 100%;
+    margin: 0.35rem 0 0.6rem 0;
+    font-size: 0.45rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--tertiary-color);
+}
+
+/* Formats the show state of 2 error messages */
+.errormsg.show {
+    display: block;
+}
+
+/* Formats 3 links around the social media icons */
+.link {
+
+}
+
+/* Formats 3 boxes around the social media icons */
+.iconbox {
+    height: 1.4rem;
+    width: 1.4rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
+}
+
+/* Formats the hover state of 3 boxes around the social media icons */
+.iconbox:hover {
+    background-color: var(--primary-color);
+}
+
+/* Formats the hover state of 3 boxes around the social media icons */
+.iconbox:hover i {
+    color: var(--white);
+}
+
+/* Formats 3 social media icons */
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--primary-color);
+}
+
+
+/* ID FORMATTING */
+/* Place all id formatting here. */
+
+/* Formats the box holding everything */
+#everythingbox {
+    width: 100%;
+    text-align: center;
+}
+
+/* Formats the box holding the main content */
+#mainbox {
+    width: 90%;
+    margin: 4rem 0 2rem 0;
+}
+
+/* Formats the top box holding the logo, heading, and subheading */
+#topbox {
+
+}
+
+/* Formats the logo box */
+#logobox {
+    width: 23%;
+}
+
+/* Formats the logo image */
+#logo {
+    width: 100%;
+}
+
+/* Formats the heading at the top of the page */
+#heading {
+    font-weight: 300;
+    color: var(--quaternary-color);
+    margin-top: 1.9rem;
+}
+
+/* Formats the bold text in the heading at the top of the page */
+#bold {
+    font-weight: 700;
+    color: var(--quinary-color);
+}
+
+/* Formats the subheading at the top of the page */
+#subheading {
+    color: var(--quinary-color);
+    font-size: 0.63rem;
+    margin-top: 0.9rem;
+    font-weight: 300;
+}
+
+/* Formats the box holding the form with email input and submit button */
+#inputbtnbox {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 1.5rem;
+}
+
+/* Formats the form with email input */
+#emailform {
+    width: 100%;
+}
+
+/* Formats the box holding the email input */
+#inputbox {
+    width: 100%;
+    border: 1px solid var(--secondary-color);
+    border-radius: 1rem;
+    padding: 0.25rem;
+}
+
+/* Formats the show state of the box holding the email input */
+#inputbox.show {
+    border: 1px solid var(--tertiary-color);
+}
+
+
+/* Formats the email input */
+#email {
+    width: 100%;
+    border: none;
+    padding: 0.25rem;
+}
+
+/* Formats the placeholder text in the email input */
+#email::placeholder {
+    color: var(--secondary-color);
+    padding-left: 1rem;
+}
+
+/* Formats the focus state of the email input */
+#email:focus {
+    outline: none;
+}
+
+/* Formats the box holding the error text for empty string */
+#emptybox {
+
+}
+
+/* Formats the box holding the error text for formatting error */
+#errorbox {
+
+}
+
+/* Formats the submit button */
+#submitbtn {
+    width: 100%;
+    border-radius: 1rem;
+    padding: 0.65rem;
+    background-color: var(--primary-color);
+    margin: 0.5rem auto 3.5rem auto;
+    color: var(--white);
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+
+/* Formats the show state of the submit button */
+#submitbtn.show {
+    margin: 0.5rem auto 2rem auto;
+}
+
+/* Formats the box holding the mock-up image */
+#mockupbox {
+    width: 100%;
+}
+
+/* Formats the mock-up image */
+#mockup {
+    width: 100%;
+}
+
+/* Formats the box holding the social media links and copyright info */
+#footer {
+    font-size: 20px;
+    width: 100%;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+/* Formats the box holding the social media links */
+#socialbox {
+    justify-content: space-between;
+    width: 5.5em;
+}
+
+/* Formats the facebook link */
+#facebooklink {
+
+}
+
+/* Formats the box holding the facebook icon */
+#facebookbox {
+    font-size: 0.75em;
+
+}
+
+/* Formats the facebook icon */
+#facebook {
+    
+}
+
+/* Formats the twitter link */
+#twitterlink {
+
+}
+
+/* Formats the box holding the twitter icon */
+#twitterbox {
+    font-size: 0.65em;
+}
+
+/* Formats the twitter icon */
+#twitter {
+    
+}
+/* Formats the instagram link */
+#instagramlink {
+
+}
+
+/* Formats the box holding the instagram icon */
+#instagrambox {
+    font-size: 0.8em;
+
+}
+
+/* Formats the instagram icon */
+#instagram {
+    
+}
+
+/* Formats the box holding the copyright info */
+#copyright {
+    font-size: 0.5em;
+    margin-top: 1.5em;
+    color: var(--quaternary-color);
+}
+
+
+/* Responsive CSS */
+
+/* Makes a flex row */
+.flexr {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Makes a flex column */
+.flexc {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Makes flex elements centered */
+.fcenter {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gives elements relative position */
+.rel {
+    position: relative;
+}
+
+/* Changes settings at 768px screen size to 1023px screen size*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* ELEMENT FORMATTING */
+
+    /* Changes the rem base */
+    html {
+        font-size: 24px;
+    }
+    
+    /* Changes the font size of the H1 elements */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    /* CLASS FORMATTING */
+
+    /* Changes the margin and text alignment of 2 error messages */
+    .errormsg {
+        margin: 0.35rem 0 0.6rem 2rem;
+        text-align: left;
+    }
+    
+    /* Changes the size of the circles around the icons */
+    .iconbox {
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+
+    /* ID FORMATTING */
+
+    /* Changes the width and margins of the main box */
+    #mainbox {
+        width: 60%;
+        margin: 3rem 0 2rem 0;
+    }
+
+    /* Changes the size of the logo box */
+    #logobox {
+        width: 16%;
+    }
+
+    /* Changes the font size and margin of the subheading */
+    #subheading {
+        font-size: 0.65rem;
+        margin-top: 0.8rem;
+    }
+
+    /* Changes the orientation, spacing, size, and margin of the input button box */
+    #inputbtnbox {
+        flex-direction: row;
+        align-content: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        margin: 1rem 0 3rem 0;
+    }
+
+    /* Changes the margin of the show state of the input button box */
+    #inputbtnbox.show {
+        margin: 1rem 0 1.5rem 0;
+    }
+
+    /* Changes the width of the email form */
+    #emailform {
+        width: 64%;
+    }
+
+    /* Changes the font size and padding of the placeholder text */
+    #email::placeholder {
+        font-size: 0.6rem;
+        padding-left: 0.5rem;
+    }
+
+    /* Changes the size and margin of the submit button */
+    #submitbtn {
+        width: 34%;
+        margin: 0;
+    }
+
+    /* Changes the margin of the show state of the submit button */
+    #submitbtn.show {
+        margin: 0 0 1.5rem 0;
+    }
+
+    /* Changes the margin of the footer */
+    #footer {
+        margin-top: 2.3rem;
+    }
+
+    /* Changes the font size and margin of the copyright text */
+    #copyright {
+        font-size: 0.6em;
+        margin-top: 1.2rem;
+    }
+   
+}
+
+/* Changes settings at 1024px screen size */
+@media only screen and (min-width: 1024px) {
+
+    /* ELEMENT FORMATTING */
+
+    /* Changes the rem base */
+    html {
+        font-size: 28px;
+    }
+    
+    /* Changes the font size of the H1 elements */
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    /* CLASS FORMATTING */
+
+    /* Changes the margin and text alignment of 2 error messages */
+    .errormsg {
+        margin: 0.35rem 0 0.6rem 2rem;
+        text-align: left;
+    }
+
+    /* Changes the size of the circles around the icons */
+    .iconbox {
+        height: 1rem;
+        width: 1rem;
+    }
+
+    /* ID FORMATTING */
+
+    /* Changes the width and margins of the main box */
+    #mainbox {
+        width: 46%;
+        margin: 3rem 0 2rem 0;
+    }
+
+    /* Changes the size of the logo box */
+    #logobox {
+        width: 16%;
+    }
+
+    /* Changes the font size and margin of the subheading */
+    #subheading {
+        font-size: 0.65rem;
+        margin-top: 0.8rem;
+    }
+
+    /* Changes the orientation, spacing, size, and margin of the input button box */
+    #inputbtnbox {
+        flex-direction: row;
+        align-content: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        margin: 1rem 0 3rem 0;
+    }
+
+    /* Changes the margin of the show state of the input button box */
+    #inputbtnbox.show {
+        margin: 1rem 0 1.5rem 0;
+    }
+
+    /* Changes the width of the email form */
+    #emailform {
+        width: 64%;
+    }
+
+    /* Changes the font size and padding of the placeholder text */
+    #email::placeholder {
+        font-size: 0.6rem;
+        padding-left: 0.5rem;
+    }
+
+    /* Changes the size and margin of the submit button */
+    #submitbtn {
+        width: 34%;
+        margin: 0;
+    }
+
+    /* Changes the margin of the show state of the submit button */
+    #submitbtn.show {
+        margin: 0 0 1.5rem 0;
+    }
+
+    /* Changes the margin of the footer */
+    #footer {
+        margin-top: 2.3rem;
+    }
+
+    /* Changes the font size and margin of the copyright text */
+    #copyright {
+        font-size: 0.6em;
+        margin-top: 1.2rem;
+    }
+}
