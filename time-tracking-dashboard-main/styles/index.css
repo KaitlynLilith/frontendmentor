@@ -1,0 +1,732 @@
+/* Imports Libre Franklin font 300, 600 & 700 weight */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+/* Sets universal CSS variables */
+:root {
+    /* Blue */
+    --blue: hsl(246, 80%, 60%);
+     /* Light red (work) */
+    --light-red-work: hsl(15, 100%, 70%);
+    /* Soft blue (play) */
+    --soft-blue-play: hsl(195, 74%, 62%);
+    /* Light red (study) */
+    --light-red-study: hsl(348, 100%, 68%);
+    /* Lime green (exercise) */
+    --lime-green-exercise: hsl(145, 58%, 55%);
+    /* Violet (social) */
+    --violet-social: hsl(264, 64%, 52%);
+    /* Soft orange (self care) */
+    --soft-orange-self-care: hsl(43, 84%, 65%);
+    /* Very dark blue */
+    --very-dark-blue: hsl(226, 43%, 10%);
+    /* Dark blue */
+    --dark-blue: hsl(235, 46%, 20%);
+    /* Desaturated blue */
+    --desaturated-blue: hsl(235, 45%, 61%);
+    /* Pale Blue */
+    --pale-blue: hsl(236, 100%, 87%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* Makes every element into a box that includes margins and padding. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ELEMENT FORMATTING */
+/* Place all element formatting here. */
+
+/* Effects all elements */
+html {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    background-color: var(--very-dark-blue);
+}
+
+/* Effects body elements */
+body {
+    position: relative;
+}
+
+
+/* CLASS FORMATTING */
+/* Place all class formatting here. */
+
+/* Formats 3 toggle switches */
+.toggle {
+
+}
+
+/* Formats the hover state 3 toggle switches */
+.toggle:hover {
+    color: var(--white);
+}
+
+/* Formats the show state 3 toggle switches */
+.toggle.show {
+    color: var(--white);
+}
+
+/* Formats 6 cards */
+.card {
+    border-radius: 0.75rem;
+}
+
+/* Formats 6 spacers at the top of each card */
+.spacer {
+    height: 2.2rem;
+}
+
+/* Formats 6 blue boxes in the 6 cards */
+.bluebox {
+    height: 85%;
+    background-color: var(--dark-blue);
+    border-radius: 0.75rem;
+    padding: 1.6rem;
+}
+
+/* Formats the active states of 6 blue boxes in the 6 cards */
+.bluebox:active {
+    background-color: var(--desaturated-blue);
+}
+
+/* Formats 6 boxes holding the category and ellipse in the 6 blue boxes */
+.catinfo {
+    justify-content: space-between;
+    color: var(--white);
+}
+
+/* Formats 6 boxes holding the category */
+.category {
+    font-size: 1.1rem;
+}
+
+/* Formats 6 boxes holding the ellipses */
+.info {
+    width: 1.2rem;
+    background-image: url(../images/icon-ellipsis.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+/* Formats the hover state of 6 boxes holding the ellipses */
+.info:hover {
+    background-image: url(../images/icon-ellipsis-white.svg);
+}
+
+/* Formats 6 boxes holding the current and previous hours */
+.hoursprev {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.3rem;
+}
+
+/* Formats 6 boxes holding the current hours */
+.hours {
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: var(--white);
+}
+
+/* Formats 6 boxes holding the previous hours */
+.prev {
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: var(--pale-blue)
+}
+
+
+/* ID FORMATTING */
+/* Place all id formatting here. */
+
+/* Formats the box holding everything */
+#everythingbox {
+    width: 100%;
+    align-items: center;
+}
+
+/* Formats the box holding the main content */
+#mainbox {
+    display: grid;
+    grid-template-rows: 1.25fr repeat(6, 1fr);
+    grid-template-columns: 100%;
+    grid-template-areas: 'one' 'two' 'three' 'four' 'five' 'six' 'seven';
+    gap: 1.3rem;
+    width: 90%;
+    margin: 4.5rem 0 4.5rem 0;
+}
+
+/* Formats the first card holding the user info and 3 toggle switches */
+#card1 {
+    grid-area: one;
+    background-color: var(--dark-blue);
+    border-radius: 0.75rem;
+}
+
+/* Formats the box holding the avatar image and user info */
+#userinfo {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--blue);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+/* Formats the box holding the avatar image */
+#avatarbox {
+    width: 25%;
+    margin-right: 1rem;
+}
+
+/* Formats the avatar image */
+#avatar {
+    width: 100%;
+    border-radius: 50%;
+    border: 0.2rem solid var(--white);
+}
+
+/* Formats the box holding 'Report for' and the user's name */
+#reportnamebox {
+    justify-content: center;
+    border-radius: 0.75rem;
+    color: var(--white);
+}
+
+/* Formats the box holding 'Report for' */
+#reportbox {
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+/* Formats the box holding the user's name */
+#namebox {
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+/* Formats the box holding 3 toggle switches */
+#togglebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--desaturated-blue);
+    padding: 1.4rem;
+}
+
+/* Formats the box holding the daily toggle switch */
+#daily {
+
+}
+
+/* Formats the box holding the weekly toggle switch */
+#weekly {
+
+}
+
+/* Formats the box holding the monthly toggle switch */
+#monthly {
+
+}
+
+/* Formats the work card */
+#card2 {
+    background-color: var(--light-red-work);
+    grid-area: two;
+}
+
+/* Formats the spacer in the work card */
+#spacer2 {
+
+}
+
+/* Formats the blue box in the work card */
+#bluebox2 {
+
+}
+
+/* Formats the box containing the category and ellipses in the work card */
+#catinfobox2 {
+
+}
+
+/* Formats the box containing the category in the work card */
+#category2 {
+
+}
+
+/* Formats the box containing the ellipses in the work card */
+#info2 {
+
+}
+
+/* Formats the box containing the current and previous hours in the work card */
+#hoursprevbox2 {
+
+}
+
+/* Formats the box containing the current hours in the work card */
+#hours2 {
+
+}
+
+/* Formats the box containing the previous ours in the work card */
+#prev2 {
+
+}
+
+/* Formats the play card */
+#card3 {
+    background-color: var(--soft-blue-play);
+    grid-area: three;
+}
+
+/* Formats the spacer in the play card */
+#spacer3 {
+    
+}
+
+/* Formats the blue box in the play card */
+#bluebox3 {
+
+}
+
+/* Formats the box containing the category and ellipses in the play card */
+#catinfobox3 {
+
+}
+
+/* Formats the box containing the category in the play card */
+#category3 {
+
+}
+
+/* Formats the box containing the ellipses in the play card */
+#info3 {
+
+}
+
+/* Formats the box containing the current and previous hours in the play card */
+#hoursprevbox3 {
+
+}
+
+/* Formats the box containing the current hours in the play card */
+#hours3 {
+
+}
+
+/* Formats the box containing the previous ours in the play card */
+#prev3 {
+    
+}
+
+/* Formats the study card */
+#card4 {
+    background-color: var(--light-red-study);
+    grid-area: four;
+}
+
+/* Formats the spacer in the study card */
+#spacer4 {
+    
+}
+
+/* Formats the blue box in the study card */
+#bluebox4 {
+
+}
+
+/* Formats the box containing the category and ellipses in the study card */
+#catinfobox4 {
+
+}
+
+/* Formats the box containing the category in the study card */
+#category4 {
+
+}
+
+/* Formats the box containing the ellipses in the study card */
+#info4 {
+
+}
+
+/* Formats the box containing the current and previous hours in the study card */
+#hoursprevbox4 {
+
+}
+
+/* Formats the box containing the current hours in the study card */
+#hours4 {
+
+}
+
+/* Formats the box containing the previous ours in the study card */
+#prev4 {
+    
+}
+
+/* Formats the exercise card */
+#card5 {
+    background-color: var(--lime-green-exercise);
+    grid-area: five;
+}
+
+/* Formats the spacer in the exercise card */
+#spacer5 {
+    
+}
+
+/* Formats the blue box in the exercise card */
+#bluebox5 {
+
+}
+
+/* Formats the box containing the category and ellipses in the exercise card */
+#catinfobox5 {
+
+}
+
+/* Formats the box containing the category in the exercise card */
+#category5 {
+
+}
+
+/* Formats the box containing the ellipses in the exercise card */
+#info5 {
+
+}
+
+/* Formats the box containing the current and previous hours in the exercise card */
+#hoursprevbox5 {
+
+}
+
+/* Formats the box containing the current hours in the exercise card */
+#hours5 {
+
+}
+
+/* Formats the box containing the previous ours in the exercise card */
+#prev5 {
+    
+}
+
+/* Formats the social card */
+#card6 {
+    background-color: var(--violet-social);
+    grid-area: six;
+}
+
+/* Formats the spacer in the social card */
+#spacer6 {
+    
+}
+
+/* Formats the blue box in the social card */
+#bluebox6 {
+
+}
+
+/* Formats the box containing the category and ellipses in the social card */
+#catinfobox6 {
+
+}
+
+/* Formats the box containing the category in the social card */
+#category6 {
+
+}
+
+/* Formats the box containing the ellipses in the social card */
+#info6 {
+
+}
+
+/* Formats the box containing the current and previous hours in the social card */
+#hoursprevbox6 {
+
+}
+
+/* Formats the box containing the current hours in the social card */
+#hours6 {
+
+}
+
+/* Formats the box containing the previous ours in the social card */
+#prev6 {
+    
+}
+
+/* Formats the self care card */
+#card7 {
+    background-color: var(--soft-orange-self-care);
+    grid-area: seven;
+}
+
+/* Formats the spacer in the self care card */
+#spacer7 {
+    
+}
+
+/* Formats the blue box in the self care card */
+#bluebox7 {
+
+}
+
+/* Formats the box containing the category and ellipses in the self care card */
+#catinfobox7 {
+
+}
+
+/* Formats the box containing the category in the self care card */
+#category7 {
+
+}
+
+/* Formats the box containing the ellipses in the self care card */
+#info7 {
+
+}
+
+/* Formats the box containing the current and previous hours in the self care card */
+#hoursprevbox7 {
+
+}
+
+/* Formats the box containing the current hours in the self care card */
+#hours7 {
+
+}
+
+/* Formats the box containing the previous ours in the self care card */
+#prev7 {
+    
+}
+
+
+/* Responsive CSS */
+
+/* Makes a flex row */
+.flexr {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Makes a flex column */
+.flexc {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Makes flex elements centered */
+.fcenter {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gives elements relative position */
+.rel {
+    position: relative;
+}
+
+/* Changes settings at 768px screen size to 1023px screen size*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* ELEMENT FORMATTING */
+
+    /* Changes the rem base */
+    html {
+        font-size: 14px;
+    }
+ 
+    /* CLASS FORMATTING */
+
+    /* Changes the margin of the 3 toggle switches */
+    .toggle {
+        margin: 0.5rem;
+    }
+
+    /* Changes the size of 6 spacers at the top of each card */
+    .spacer {
+        height: 2.4rem;
+    }
+
+    /* Changes the font size of 6 category texts at the top of each blue box */
+    .category {
+        font-size: 1.1rem;
+    }
+    
+    /* Changes the size of 6 ellipes at the top of each blue box */
+    .info {
+        width: 1rem;
+    }
+
+    /* Changes the orientation, alignment, and margin of the box holding the current hours and previous hours */
+    .hoursprev {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1.5rem;
+    }
+
+    /* Changes the font size of the box holding the current hours */
+    .hours {
+        font-size: 3rem;
+    }
+    
+    /* Changes the font size and margin of the box holding the previous hours */
+    .prev {
+        margin-top: 0.25rem;
+        font-size: 0.8rem;
+    }
+    
+
+    /* ID FORMATTING */
+
+    /* Changes the size of the box that holds everything */
+    #everythingbox {
+        width: 100%;
+        height: 100vh;
+    }
+    
+    /* Changes the position, composition, size and margin of the main container */
+    #mainbox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 'one two three four' 'one five six seven';
+        gap: 1rem;
+        width: 90%;
+        margin: 0;
+    }
+
+    /* Changes the orientation and padding of the box holding the user info */
+    #userinfo {
+        flex-direction: column;
+        padding: 2rem 2rem 4.5rem 2rem;
+    }
+
+    /* Changes the width and margin of the box holding the avatar image */
+    #avatarbox {
+        width: 40%;
+        margin: 0 0 1.75rem 0;
+    }
+
+    /* Changes the font size of the box containing 'Report for' */
+    #reportbox {
+        font-size: 0.75rem;
+    }
+    
+    /* Changes the font size of the box containing the user's name */
+    #namebox {
+        font-size: 2.25rem;
+    }
+
+    /* Changes the orientation and padding of the box containing 3 toggle switches */
+    #togglebox {
+        flex-direction: column;
+        padding: 1rem 1rem 1.2rem 1.5rem;
+    }
+}
+
+/* Changes settings at 1024px screen size */
+@media only screen and (min-width: 1024px) {    
+    
+    /* CLASS FORMATTING */
+
+    /* Changes the margin of the 3 toggle switches */
+    .toggle {
+        margin: 0.5rem;
+    }
+
+    /* Changes the size of 6 spacers at the top of each card */
+    .spacer {
+        height: 2.4rem;
+    }
+
+    /* Changes the font size of 6 category texts at the top of each blue box */
+    .category {
+        font-size: 1.1rem;
+    }
+    
+    /* Changes the size of 6 ellipes at the top of each blue box */
+    .info {
+        width: 1rem;
+    }
+
+    /* Changes the orientation, alignment, and margin of the box holding the current hours and previous hours */
+    .hoursprev {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1.5rem;
+    }
+
+    /* Changes the font size of the box holding the current hours */
+    .hours {
+        font-size: 3rem;
+    }
+    
+    /* Changes the font size and margin of the box holding the previous hours */
+    .prev {
+        margin-top: 0.25rem;
+        font-size: 0.8rem;
+    }
+    
+
+    /* ID FORMATTING */
+
+    /* Changes the size of the box that holds everything */
+    #everythingbox {
+        width: 100%;
+        height: 100vh;
+    }
+    
+    /* Changes the position, composition, size and margin of the main container */
+    #mainbox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 'one two three four' 'one five six seven';
+        gap: 1rem;
+        width: 80%;
+        margin: 0;
+    }
+
+    /* Changes the orientation and padding of the box holding the user info */
+    #userinfo {
+        flex-direction: column;
+        padding: 2rem 2rem 4.5rem 2rem;
+    }
+
+    /* Changes the width and margin of the box holding the avatar image */
+    #avatarbox {
+        width: 40%;
+        margin: 0 0 1.75rem 0;
+    }
+
+    /* Changes the font size of the box containing 'Report for' */
+    #reportbox {
+        font-size: 0.75rem;
+    }
+    
+    /* Changes the font size of the box containing the user's name */
+    #namebox {
+        font-size: 2.25rem;
+    }
+
+    /* Changes the orientation and padding of the box containing 3 toggle switches */
+    #togglebox {
+        flex-direction: column;
+        padding: 1rem 1rem 1.2rem 1.5rem;
+    }
+}
