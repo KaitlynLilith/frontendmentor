@@ -1,222 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <!-- displays site properly based on user's device -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <head>
+    <meta charset="UTF-8" />
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Imports the CSS for the page --> 
-  <link rel="stylesheet" href="./styles/index.css">
+    <!-- Imports the CSS for the page -->
+    <link rel="stylesheet" href="./styles/index.css" />
 
-  <!-- Imports FontAwesome icon library -->
-  <script src="https://kit.fontawesome.com/5d5f7bf628.js" crossorigin="anonymous"></script>
+    <!-- Imports FontAwesome icon library -->
+    <script
+      src="https://kit.fontawesome.com/5d5f7bf628.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Icon and Title: Shows up in browser tab -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | Time tracking dashboard | Katie Fox</title>
-
-</head>
-<body>
-  <!-- Makes an invisible box around everything -->
-  <div id="everythingbox" class="rel flexc">
-    <!-- Main box: holds main content -->
-    <div id="mainbox" class="rel flexc fcenter">
-      <!-- Card 1: holds the user info and 3 toggle switches -->
-      <div id="card1" class="rel">
-        <!-- User info box: holds the avatar image and the user's name -->
-        <div id="userinfo" class="rel">
-          <!-- Avatar box: holds the avatar image -->
-          <div id="avatarbox" class="rel">
-            <!-- Avatar image -->
-            <img src="./images/image-jeremy.png" alt="Image of Jeremy" id="avatar" class="rel">
-          </div>
-          <!-- Report-name box: holds the "Report for" text and the user's name -->
-          <div id="reportnamebox" class="rel flexc">
-            <!-- Report box: holds the "Report for" text -->
-            <div id="reportbox" class="rel">
-              Report for
+    <!-- Icon and Title: Shows up in browser tab -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Time tracking dashboard | Katie Fox</title>
+  </head>
+  <body>
+    <!-- Makes an invisible box around everything -->
+    <div id="everythingbox" class="rel flexc">
+      <!-- Main box: holds main content -->
+      <div id="mainbox" class="rel flexc fcenter">
+        <!-- Card 1: holds the user info and 3 toggle switches -->
+        <div id="card1" class="rel">
+          <!-- User info box: holds the avatar image and the user's name -->
+          <div id="userinfo" class="rel">
+            <!-- Avatar box: holds the avatar image -->
+            <div id="avatarbox" class="rel">
+              <!-- Avatar image -->
+              <img
+                src="./images/image-jeremy.png"
+                alt="Image of Jeremy"
+                id="avatar"
+                class="rel"
+              />
             </div>
-            <!-- Name box: holds the user's name -->
-            <div id="namebox" class="rel">
-              Jeremy Robson
+            <!-- Report-name box: holds the "Report for" text and the user's name -->
+            <div id="reportnamebox" class="rel flexc">
+              <!-- Report box: holds the "Report for" text -->
+              <div id="reportbox" class="rel">Report for</div>
+              <!-- Name box: holds the user's name -->
+              <div id="namebox" class="rel">Jeremy Robson</div>
+            </div>
+          </div>
+          <!-- Blue box 1: holds 3 toggle switches -->
+          <div id="togglebox" class="rel">
+            <!-- Daily toggle switch -->
+            <div id="daily" class="rel toggle" onclick="daily()">Daily</div>
+            <!-- Weekly toggle switch -->
+            <div id="weekly" class="rel toggle" onclick="weekly()">Weekly</div>
+            <!-- Monthly toggle switch -->
+            <div id="monthly" class="rel toggle" onclick="monthly()">
+              Monthly
             </div>
           </div>
         </div>
-        <!-- Blue box 1: holds 3 toggle switches -->
-        <div id="togglebox" class="rel">
-          <!-- Daily toggle switch -->
-          <div id="daily" class="rel toggle" onclick="daily()">
-            Daily
+
+        <!-- Card 2: holds colored background, category, info ellipse, current hours and previous hours -->
+        <div id="card2" class="rel card">
+          <!-- Spacer 2: empty div for spacing -->
+          <div id="spacer2" class="rel spacer"></div>
+          <!-- Blue box 2: holds category, info ellipse, current hours and previous hours -->
+          <div id="bluebox2" class="rel bluebox flexc">
+            <!-- Category info box 2: holds category and info ellipse -->
+            <div id="catinfobox2" class="rel catinfo flexr">
+              <!-- Category 2: holds category -->
+              <div id="category2" class="rel category">Work</div>
+              <!-- Info 2: holds info ellipse image -->
+              <div id="info2" class="rel info"></div>
+            </div>
+            <!-- Hours-previous box 2: holds current hours and previous hours -->
+            <div id="hoursprevbox2" class="rel hoursprev">
+              <!-- Hours 2: holds current hours -->
+              <div id="hours2" class="rel hours"></div>
+              <!-- Previous box 2: holds previous hours -->
+              <div id="prev2" class="rel prev"></div>
+            </div>
           </div>
-          <!-- Weekly toggle switch -->
-          <div id="weekly" class="rel toggle" onclick="weekly()">
-            Weekly
+        </div>
+
+        <!-- Card 3: holds colored background, category, info ellipse, current hours and previous hours -->
+        <div id="card3" class="rel card">
+          <!-- Spacer 3: empty div for spacing -->
+          <div id="spacer3" class="rel spacer"></div>
+          <!-- Blue box 3: holds category, info ellipse, current hours and previous hours -->
+          <div id="bluebox3" class="rel bluebox flexc">
+            <!-- Category info box 3: holds category and info ellipse -->
+            <div id="catinfobox3" class="rel catinfo flexr">
+              <!-- Category 3: holds category -->
+              <div id="category3" class="rel category">Play</div>
+              <!-- Info 3: holds info ellipse image -->
+              <div id="info3" class="rel info"></div>
+            </div>
+            <!-- Hours-previous box 3: holds current hours and previous hours -->
+            <div id="hoursprevbox3" class="rel hoursprev">
+              <!-- Hours 3: holds current hours -->
+              <div id="hours3" class="rel hours"></div>
+              <!-- Previous box 3: holds previous hours -->
+              <div id="prev3" class="rel prev"></div>
+            </div>
           </div>
-          <!-- Monthly toggle switch -->
-          <div id="monthly" class="rel toggle" onclick="monthly()">
-            Monthly
+        </div>
+
+        <!-- Card 4: holds colored background, category, info ellipse, current hours and previous hours -->
+        <div id="card4" class="rel card">
+          <!-- Spacer 4: empty div for spacing -->
+          <div id="spacer4" class="rel spacer"></div>
+          <!-- Blue box 4: holds category, info ellipse, current hours and previous hours -->
+          <div id="bluebox4" class="rel bluebox flexc">
+            <!-- Category info box 4: holds category and info ellipse -->
+            <div id="catinfobox4" class="rel catinfo flexr">
+              <!-- Category 4: holds category -->
+              <div id="category4" class="rel category">Study</div>
+              <!-- Info 4: holds info ellipse image -->
+              <div id="info4" class="rel info"></div>
+            </div>
+            <!-- Hours-previous box 4: holds current hours and previous hours -->
+            <div id="hoursprevbox4" class="rel hoursprev">
+              <!-- Hours 4: holds current hours -->
+              <div id="hours4" class="rel hours"></div>
+              <!-- Previous box 4: holds previous hours -->
+              <div id="prev4" class="rel prev"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: holds colored background, category, info ellipse, current hours and previous hours -->
+        <div id="card5" class="rel card">
+          <!-- Spacer 5: empty div for spacing -->
+          <div id="spacer5" class="rel spacer"></div>
+          <!-- Blue box 5: holds category, info ellipse, current hours and previous hours -->
+          <div id="bluebox5" class="rel bluebox flexc">
+            <!-- Category info box 5: holds category and info ellipse -->
+            <div id="catinfobox5" class="rel catinfo flexr">
+              <!-- Category 5: holds category -->
+              <div id="category5" class="rel category">Exercise</div>
+              <!-- Info 5: holds info ellipse image -->
+              <div id="info5" class="rel info"></div>
+            </div>
+            <!-- Hours-previous box 5: holds current hours and previous hours -->
+            <div id="hoursprevbox5" class="rel hoursprev">
+              <!-- Hours 5: holds current hours -->
+              <div id="hours5" class="rel hours"></div>
+              <!-- Previous box 5: holds previous hours -->
+              <div id="prev5" class="rel prev"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: holds colored background, category, info ellipse, current hours and previous hours -->
+        <div id="card6" class="rel card">
+          <!-- Spacer 6: empty div for spacing -->
+          <div id="spacer6" class="rel spacer"></div>
+          <!-- Blue box 6: holds category, info ellipse, current hours and previous hours -->
+          <div id="bluebox6" class="rel bluebox flexc">
+            <!-- Category info box 6: holds category and info ellipse -->
+            <div id="catinfobox6" class="rel catinfo flexr">
+              <!-- Category 6: holds category -->
+              <div id="category6" class="rel category">Social</div>
+              <!-- Info 6: holds info ellipse image -->
+              <div id="info6" class="rel info"></div>
+            </div>
+            <!-- Hours-previous box 6: holds current hours and previous hours -->
+            <div id="hoursprevbox6" class="rel hoursprev">
+              <!-- Hours 6: holds current hours -->
+              <div id="hours6" class="rel hours"></div>
+              <!-- Previous box 6: holds previous hours -->
+              <div id="prev6" class="rel prev"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7: holds colored background, category, info ellipse, current hours and previous hours -->
+        <div id="card7" class="rel card">
+          <!-- Spacer 7: empty div for spacing -->
+          <div id="spacer7" class="rel spacer"></div>
+          <!-- Blue box 7: holds category, info ellipse, current hours and previous hours -->
+          <div id="bluebox7" class="rel bluebox flexc">
+            <!-- Category info box 7: holds category and info ellipse -->
+            <div id="catinfobox7" class="rel catinfo flexr">
+              <!-- Category 7: holds category -->
+              <div id="category7" class="rel category">Self Care</div>
+              <!-- Info 7: holds info ellipse image -->
+              <div id="info7" class="rel info"></div>
+            </div>
+            <!-- Hours-previous box 7: holds current hours and previous hours -->
+            <div id="hoursprevbox7" class="rel hoursprev">
+              <!-- Hours 7: holds current hours -->
+              <div id="hours7" class="rel hours"></div>
+              <!-- Previous box 7: holds previous hours -->
+              <div id="prev7" class="rel prev"></div>
+            </div>
           </div>
         </div>
       </div>
-
-
-      <!-- Card 2: holds colored background, category, info ellipse, current hours and previous hours -->
-      <div id="card2" class="rel card">
-        <!-- Spacer 2: empty div for spacing -->
-        <div id="spacer2" class="rel spacer"></div>
-        <!-- Blue box 2: holds category, info ellipse, current hours and previous hours -->
-        <div id="bluebox2" class="rel bluebox flexc">
-          <!-- Category info box 2: holds category and info ellipse -->
-          <div id="catinfobox2" class="rel catinfo flexr">
-          <!-- Category 2: holds category -->
-            <div id="category2" class="rel category">
-              Work
-            </div>
-          <!-- Info 2: holds info ellipse image -->
-          <div id="info2" class="rel info"></div>
-        </div>
-        <!-- Hours-previous box 2: holds current hours and previous hours -->
-          <div id="hoursprevbox2" class="rel hoursprev">
-            <!-- Hours 2: holds current hours -->
-            <div id="hours2" class="rel hours"></div>
-            <!-- Previous box 2: holds previous hours -->
-            <div id="prev2" class="rel prev"></div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Card 3: holds colored background, category, info ellipse, current hours and previous hours -->
-      <div id="card3" class="rel card">
-        <!-- Spacer 3: empty div for spacing -->
-        <div id="spacer3" class="rel spacer"></div>
-        <!-- Blue box 3: holds category, info ellipse, current hours and previous hours -->
-        <div id="bluebox3" class="rel bluebox flexc">
-          <!-- Category info box 3: holds category and info ellipse -->
-          <div id="catinfobox3" class="rel catinfo flexr">
-          <!-- Category 3: holds category -->
-            <div id="category3" class="rel category">
-              Play
-            </div>
-          <!-- Info 3: holds info ellipse image -->
-          <div id="info3" class="rel info"></div>
-        </div>
-        <!-- Hours-previous box 3: holds current hours and previous hours -->
-          <div id="hoursprevbox3" class="rel hoursprev">
-            <!-- Hours 3: holds current hours -->
-            <div id="hours3" class="rel hours"></div>
-            <!-- Previous box 3: holds previous hours -->
-            <div id="prev3" class="rel prev"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4: holds colored background, category, info ellipse, current hours and previous hours -->
-      <div id="card4" class="rel card">
-        <!-- Spacer 4: empty div for spacing -->
-        <div id="spacer4" class="rel spacer"></div>
-        <!-- Blue box 4: holds category, info ellipse, current hours and previous hours -->
-        <div id="bluebox4" class="rel bluebox flexc">
-          <!-- Category info box 4: holds category and info ellipse -->
-          <div id="catinfobox4" class="rel catinfo flexr">
-          <!-- Category 4: holds category -->
-            <div id="category4" class="rel category">
-              Study
-            </div>
-          <!-- Info 4: holds info ellipse image -->
-            <div id="info4" class="rel info"></div>
-          </div>
-        <!-- Hours-previous box 4: holds current hours and previous hours -->
-          <div id="hoursprevbox4" class="rel hoursprev">
-            <!-- Hours 4: holds current hours -->
-            <div id="hours4" class="rel hours"></div>
-            <!-- Previous box 4: holds previous hours -->
-            <div id="prev4" class="rel prev"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 5: holds colored background, category, info ellipse, current hours and previous hours -->
-      <div id="card5" class="rel card">
-        <!-- Spacer 5: empty div for spacing -->
-        <div id="spacer5" class="rel spacer"></div>
-        <!-- Blue box 5: holds category, info ellipse, current hours and previous hours -->
-        <div id="bluebox5" class="rel bluebox flexc">
-          <!-- Category info box 5: holds category and info ellipse -->
-          <div id="catinfobox5" class="rel catinfo flexr">
-          <!-- Category 5: holds category -->
-            <div id="category5" class="rel category">
-              Exercise
-            </div>
-          <!-- Info 5: holds info ellipse image -->
-            <div id="info5" class="rel info"></div>
-          </div>
-        <!-- Hours-previous box 5: holds current hours and previous hours -->
-          <div id="hoursprevbox5" class="rel hoursprev">
-            <!-- Hours 5: holds current hours -->
-            <div id="hours5" class="rel hours"></div>
-            <!-- Previous box 5: holds previous hours -->
-            <div id="prev5" class="rel prev"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 6: holds colored background, category, info ellipse, current hours and previous hours -->
-      <div id="card6" class="rel card">
-        <!-- Spacer 6: empty div for spacing -->
-        <div id="spacer6" class="rel spacer"></div>
-        <!-- Blue box 6: holds category, info ellipse, current hours and previous hours -->
-        <div id="bluebox6" class="rel bluebox flexc">
-          <!-- Category info box 6: holds category and info ellipse -->
-          <div id="catinfobox6" class="rel catinfo flexr">
-          <!-- Category 6: holds category -->
-            <div id="category6" class="rel category">
-              Social
-            </div>
-          <!-- Info 6: holds info ellipse image -->
-            <div id="info6" class="rel info"></div>
-          </div>
-        <!-- Hours-previous box 6: holds current hours and previous hours -->
-          <div id="hoursprevbox6" class="rel hoursprev">
-            <!-- Hours 6: holds current hours -->
-            <div id="hours6" class="rel hours"></div>
-            <!-- Previous box 6: holds previous hours -->
-            <div id="prev6" class="rel prev"></div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Card 7: holds colored background, category, info ellipse, current hours and previous hours -->
-      <div id="card7" class="rel card">
-        <!-- Spacer 7: empty div for spacing -->
-        <div id="spacer7" class="rel spacer"></div>
-        <!-- Blue box 7: holds category, info ellipse, current hours and previous hours -->
-        <div id="bluebox7" class="rel bluebox flexc">
-          <!-- Category info box 7: holds category and info ellipse -->
-          <div id="catinfobox7" class="rel catinfo flexr">
-          <!-- Category 7: holds category -->
-            <div id="category7" class="rel category">
-              Self Care
-            </div>
-          <!-- Info 7: holds info ellipse image -->
-            <div id="info7" class="rel info"></div>
-          </div>
-        <!-- Hours-previous box 7: holds current hours and previous hours -->
-          <div id="hoursprevbox7" class="rel hoursprev">
-            <!-- Hours 7: holds current hours -->
-            <div id="hours7" class="rel hours"></div>
-            <!-- Previous box 7: holds previous hours -->
-            <div id="prev7" class="rel prev"></div>
-          </div>
-        </div>
-      </div>      
-
     </div>
-  </div>
-  <!-- Imports the JSON file for the page --> 
-  <script type="text/javascript" src="./data.json"></script>
-  <!-- Imports the Javascript for the page --> 
-  <script type="text/javascript" src="./scripts/index.js"></script> 
-</body>
+    <!-- Imports the JSON file for the page -->
+    <!-- <script type="text/javascript" src="./data.json"></script> -->
+    <!-- Imports the Javascript for the page -->
+    <script type="text/javascript" src="./scripts/index.js"></script>
+  </body>
 </html>
